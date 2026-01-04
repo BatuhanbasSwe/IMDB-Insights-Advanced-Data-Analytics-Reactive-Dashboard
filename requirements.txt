@@ -1,0 +1,14 @@
+selenium
+webdriver-manager
+pymongo
+dnspython
+requests
+beautifulsoup4
+
+# Added for advanced analysis and utilities
+pandas
+numpy
+scipy
+tqdm
+matplotlib
+seaborn

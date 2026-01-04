@@ -1,0 +1,10 @@
+2025-12-09 04:17:06,745 - INFO - --> Connection Successful! Target: IMDb_Archive -> Allcontent
+2025-12-09 04:55:14,637 - INFO - --> Connection Successful! Target: IMDb_Archive -> Allcontent
+2025-12-09 04:56:05,316 - INFO - ====== WebDriver manager ======
+2025-12-09 04:56:05,515 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-09 04:56:05,632 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-09 04:56:05,719 - INFO - Driver [/home/ilyas-guney/.wdm/drivers/chromedriver/linux64/140.0.7339.207/chromedriver-linux64/chromedriver] found in cache
+2025-12-09 04:57:02,011 - INFO - ====== WebDriver manager ======
+2025-12-09 04:57:02,230 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-09 04:57:02,322 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-09 04:57:02,413 - INFO - Driver [/home/ilyas-guney/.wdm/drivers/chromedriver/linux64/140.0.7339.207/chromedriver-linux64/chromedriver] found in cache

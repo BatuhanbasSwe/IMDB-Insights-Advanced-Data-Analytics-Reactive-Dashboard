@@ -1,0 +1,4423 @@
+{
+  "summary": {
+    "n_records": 250,
+    "rating_stats": {
+      "q1": 8.1,
+      "q3": 8.4,
+      "iqr": 0.3000000000000007,
+      "lower": 7.649999999999999,
+      "upper": 8.850000000000001
+    },
+    "metascore_stats": {
+      "q1": 75.25,
+      "q3": 93.0,
+      "iqr": 17.75,
+      "lower": 48.625,
+      "upper": 119.625
+    },
+    "metascore_median_used_for_impute": 85.5,
+    "anomalies_counts": {
+      "rating_iqr": 8,
+      "metascore_iqr": 0,
+      "any": 8
+    }
+  },
+  "records": [
+    {
+      "url": "https://www.imdb.com/title/tt0111161/",
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "rating": 9.3,
+      "metascore": 82,
+      "duration": "2h 22m",
+      "duration_min": 142,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0068646/",
+      "title": "The Godfather",
+      "year": 1972,
+      "rating": 9.2,
+      "metascore": 100,
+      "duration": "2h 55m",
+      "duration_min": 175,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0468569/",
+      "title": "The Dark Knight",
+      "year": 2008,
+      "rating": 9.1,
+      "metascore": 85,
+      "duration": "2h 32m",
+      "duration_min": 152,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0071562/",
+      "title": "The Godfather Part II",
+      "year": 1974,
+      "rating": 9.0,
+      "metascore": 90,
+      "duration": "3h 22m",
+      "duration_min": 202,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0050083/",
+      "title": "12 Angry Men",
+      "year": 1957,
+      "rating": 9.0,
+      "metascore": 97,
+      "duration": "1h 36m",
+      "duration_min": 96,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0167260/",
+      "title": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "rating": 9.0,
+      "metascore": 94,
+      "duration": "3h 21m",
+      "duration_min": 201,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0108052/",
+      "title": "Schindler's List",
+      "year": 1993,
+      "rating": 9.0,
+      "metascore": 95,
+      "duration": "3h 15m",
+      "duration_min": 195,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0120737/",
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "rating": 8.9,
+      "metascore": 92,
+      "duration": "2h 58m",
+      "duration_min": 178,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": true,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": true
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0110912/",
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "rating": 8.8,
+      "metascore": 95,
+      "duration": "2h 34m",
+      "duration_min": 154,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0060196/",
+      "title": "The Good, the Bad and the Ugly",
+      "year": 1966,
+      "rating": 8.8,
+      "metascore": 90,
+      "duration": "2h 58m",
+      "duration_min": 178,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Western"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0167261/",
+      "title": "The Lord of the Rings: The Two Towers",
+      "year": 2002,
+      "rating": 8.8,
+      "metascore": 87,
+      "duration": "2h 59m",
+      "duration_min": 179,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0109830/",
+      "title": "Forrest Gump",
+      "year": 1994,
+      "rating": 8.8,
+      "metascore": 82,
+      "duration": "2h 22m",
+      "duration_min": 142,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0137523/",
+      "title": "Fight Club",
+      "year": 1999,
+      "rating": 8.8,
+      "metascore": 67,
+      "duration": "2h 19m",
+      "duration_min": 139,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1375666/",
+      "title": "Inception",
+      "year": 2010,
+      "rating": 8.8,
+      "metascore": 74,
+      "duration": "2h 28m",
+      "duration_min": 148,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0080684/",
+      "title": "Star Wars: Episode V - The Empire Strikes Back",
+      "year": 1980,
+      "rating": 8.7,
+      "metascore": 82,
+      "duration": "2h 4m",
+      "duration_min": 124,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0133093/",
+      "title": "The Matrix",
+      "year": 1999,
+      "rating": 8.7,
+      "metascore": 73,
+      "duration": "2h 16m",
+      "duration_min": 136,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0099685/",
+      "title": "Goodfellas",
+      "year": 1990,
+      "rating": 8.7,
+      "metascore": 92,
+      "duration": "2h 25m",
+      "duration_min": 145,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0816692/",
+      "title": "Interstellar",
+      "year": 2014,
+      "rating": 8.7,
+      "metascore": 74,
+      "duration": "2h 49m",
+      "duration_min": 169,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0073486/",
+      "title": "One Flew Over the Cuckoo's Nest",
+      "year": 1975,
+      "rating": 8.6,
+      "metascore": 84,
+      "duration": "2h 13m",
+      "duration_min": 133,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0114369/",
+      "title": "Se7en",
+      "year": 1995,
+      "rating": 8.6,
+      "metascore": 65,
+      "duration": "2h 7m",
+      "duration_min": 127,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0038650/",
+      "title": "It's a Wonderful Life",
+      "year": 1946,
+      "rating": 8.6,
+      "metascore": 89,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Family",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0102926/",
+      "title": "The Silence of the Lambs",
+      "year": 1991,
+      "rating": 8.6,
+      "metascore": 86,
+      "duration": "1h 58m",
+      "duration_min": 118,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Horror"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0047478/",
+      "title": "Seven Samurai",
+      "year": 1954,
+      "rating": 8.6,
+      "metascore": 98,
+      "duration": "3h 27m",
+      "duration_min": 207,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0120815/",
+      "title": "Saving Private Ryan",
+      "year": 1998,
+      "rating": 8.6,
+      "metascore": 91,
+      "duration": "2h 49m",
+      "duration_min": 169,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0120689/",
+      "title": "The Green Mile",
+      "year": 1999,
+      "rating": 8.6,
+      "metascore": 61,
+      "duration": "3h 9m",
+      "duration_min": 189,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0317248/",
+      "title": "City of God",
+      "year": 2002,
+      "rating": 8.6,
+      "metascore": 79,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0118799/",
+      "title": "Life Is Beautiful",
+      "year": 1997,
+      "rating": 8.6,
+      "metascore": 58,
+      "duration": "1h 56m",
+      "duration_min": 116,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0103064/",
+      "title": "Terminator 2: Judgment Day",
+      "year": 1991,
+      "rating": 8.6,
+      "metascore": 75,
+      "duration": "2h 17m",
+      "duration_min": 137,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0076759/",
+      "title": "Star Wars: Episode IV - A New Hope",
+      "year": 1977,
+      "rating": 8.6,
+      "metascore": 90,
+      "duration": "2h 1m",
+      "duration_min": 121,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0088763/",
+      "title": "Back to the Future",
+      "year": 1985,
+      "rating": 8.5,
+      "metascore": 88,
+      "duration": "1h 56m",
+      "duration_min": 116,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0245429/",
+      "title": "Spirited Away",
+      "year": 2001,
+      "rating": 8.6,
+      "metascore": 96,
+      "duration": "2h 4m",
+      "duration_min": 124,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0253474/",
+      "title": "The Pianist",
+      "year": 2002,
+      "rating": 8.5,
+      "metascore": 85,
+      "duration": "2h 30m",
+      "duration_min": 150,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Music"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0172495/",
+      "title": "Gladiator",
+      "year": 2000,
+      "rating": 8.5,
+      "metascore": 67,
+      "duration": "2h 35m",
+      "duration_min": 155,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt6751668/",
+      "title": "Parasite",
+      "year": 2019,
+      "rating": 8.5,
+      "metascore": 97,
+      "duration": "2h 12m",
+      "duration_min": 132,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0054215/",
+      "title": "Psycho",
+      "year": 1960,
+      "rating": 8.5,
+      "metascore": 97,
+      "duration": "1h 49m",
+      "duration_min": 109,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Horror",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0095327/",
+      "title": "Grave of the Fireflies",
+      "year": 1988,
+      "rating": 8.5,
+      "metascore": 94,
+      "duration": "1h 28m",
+      "duration_min": 88,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0110357/",
+      "title": "The Lion King",
+      "year": 1994,
+      "rating": 8.5,
+      "metascore": 88,
+      "duration": "1h 28m",
+      "duration_min": 88,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0056058/",
+      "title": "Harakiri",
+      "year": 1962,
+      "rating": 8.6,
+      "metascore": 85,
+      "duration": "2h 13m",
+      "duration_min": 133,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0407887/",
+      "title": "The Departed",
+      "year": 2006,
+      "rating": 8.5,
+      "metascore": 85,
+      "duration": "2h 31m",
+      "duration_min": 151,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2582802/",
+      "title": "Whiplash",
+      "year": 2014,
+      "rating": 8.5,
+      "metascore": 89,
+      "duration": "1h 46m",
+      "duration_min": 106,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0482571/",
+      "title": "The Prestige",
+      "year": 2006,
+      "rating": 8.5,
+      "metascore": 66,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0120586/",
+      "title": "American History X",
+      "year": 1998,
+      "rating": 8.5,
+      "metascore": 62,
+      "duration": "1h 59m",
+      "duration_min": 119,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0110413/",
+      "title": "Léon: The Professional",
+      "year": 1994,
+      "rating": 8.5,
+      "metascore": 64,
+      "duration": "1h 50m",
+      "duration_min": 110,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt9362722/",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "rating": 8.5,
+      "metascore": 86,
+      "duration": "2h 20m",
+      "duration_min": 140,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0095765/",
+      "title": "Cinema Paradiso",
+      "year": 1988,
+      "rating": 8.5,
+      "metascore": 80,
+      "duration": "2h 54m",
+      "duration_min": 174,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0034583/",
+      "title": "Casablanca",
+      "year": 1942,
+      "rating": 8.5,
+      "metascore": 100,
+      "duration": "1h 42m",
+      "duration_min": 102,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1675434/",
+      "title": "The Intouchables",
+      "year": 2011,
+      "rating": 8.5,
+      "metascore": 57,
+      "duration": "1h 52m",
+      "duration_min": 112,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0114814/",
+      "title": "The Usual Suspects",
+      "year": 1995,
+      "rating": 8.5,
+      "metascore": 76,
+      "duration": "1h 46m",
+      "duration_min": 106,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0078748/",
+      "title": "Alien",
+      "year": 1979,
+      "rating": 8.5,
+      "metascore": 89,
+      "duration": "1h 57m",
+      "duration_min": 117,
+      "votes": null,
+      "genres": [
+        "Horror",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0027977/",
+      "title": "Modern Times",
+      "year": 1936,
+      "rating": 8.5,
+      "metascore": 96,
+      "duration": "1h 27m",
+      "duration_min": 87,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0047396/",
+      "title": "Rear Window",
+      "year": 1954,
+      "rating": 8.5,
+      "metascore": 100,
+      "duration": "1h 52m",
+      "duration_min": 112,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1853728/",
+      "title": "Django Unchained",
+      "year": 2012,
+      "rating": 8.5,
+      "metascore": 81,
+      "duration": "2h 45m",
+      "duration_min": 165,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0064116/",
+      "title": "Once Upon a Time in the West",
+      "year": 1968,
+      "rating": 8.5,
+      "metascore": 82,
+      "duration": "2h 46m",
+      "duration_min": 166,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0021749/",
+      "title": "City Lights",
+      "year": 1931,
+      "rating": 8.5,
+      "metascore": 99,
+      "duration": "1h 27m",
+      "duration_min": 87,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0078788/",
+      "title": "Apocalypse Now",
+      "year": 1979,
+      "rating": 8.4,
+      "metascore": 94,
+      "duration": "2h 27m",
+      "duration_min": 147,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0910970/",
+      "title": "WALL·E",
+      "year": 2008,
+      "rating": 8.4,
+      "metascore": 95,
+      "duration": "1h 38m",
+      "duration_min": 98,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0209144/",
+      "title": "Memento",
+      "year": 2000,
+      "rating": 8.4,
+      "metascore": 83,
+      "duration": "1h 53m",
+      "duration_min": 113,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt15239678/",
+      "title": "Dune: Part Two",
+      "year": 2024,
+      "rating": 8.4,
+      "metascore": 79,
+      "duration": "2h 46m",
+      "duration_min": 166,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0082971/",
+      "title": "Raiders of the Lost Ark",
+      "year": 1981,
+      "rating": 8.4,
+      "metascore": 86,
+      "duration": "1h 55m",
+      "duration_min": 115,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt4154756/",
+      "title": "Avengers: Infinity War",
+      "year": 2018,
+      "rating": 8.4,
+      "metascore": 68,
+      "duration": "2h 29m",
+      "duration_min": 149,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0405094/",
+      "title": "The Lives of Others",
+      "year": 2006,
+      "rating": 8.4,
+      "metascore": 89,
+      "duration": "2h 17m",
+      "duration_min": 137,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt4633694/",
+      "title": "Spider-Man: Into the Spider-Verse",
+      "year": 2018,
+      "rating": 8.4,
+      "metascore": 87,
+      "duration": "1h 57m",
+      "duration_min": 117,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0043014/",
+      "title": "Sunset Boulevard",
+      "year": 1950,
+      "rating": 8.4,
+      "metascore": 94,
+      "duration": "1h 50m",
+      "duration_min": 110,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Film-Noir"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0051201/",
+      "title": "Witness for the Prosecution",
+      "year": 1957,
+      "rating": 8.4,
+      "metascore": 76,
+      "duration": "1h 56m",
+      "duration_min": 116,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0050825/",
+      "title": "Paths of Glory",
+      "year": 1957,
+      "rating": 8.4,
+      "metascore": 90,
+      "duration": "1h 28m",
+      "duration_min": 88,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0081505/",
+      "title": "The Shining",
+      "year": 1980,
+      "rating": 8.4,
+      "metascore": 68,
+      "duration": "2h 26m",
+      "duration_min": 146,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Horror"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0032553/",
+      "title": "The Great Dictator",
+      "year": 1940,
+      "rating": 8.4,
+      "metascore": 100,
+      "duration": "2h 5m",
+      "duration_min": 125,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0361748/",
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "rating": 8.4,
+      "metascore": 69,
+      "duration": "2h 33m",
+      "duration_min": 153,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt23849204/",
+      "title": "12th Fail",
+      "year": 2023,
+      "rating": 8.7,
+      "metascore": 100,
+      "duration": "2h 27m",
+      "duration_min": 147,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0090605/",
+      "title": "Aliens",
+      "year": 1986,
+      "rating": 8.4,
+      "metascore": 84,
+      "duration": "2h 17m",
+      "duration_min": 137,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Horror"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0057565/",
+      "title": "High and Low",
+      "year": 1963,
+      "rating": 8.4,
+      "metascore": 90,
+      "duration": "2h 23m",
+      "duration_min": 143,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1345836/",
+      "title": "The Dark Knight Rises",
+      "year": 2012,
+      "rating": 8.4,
+      "metascore": 78,
+      "duration": "2h 44m",
+      "duration_min": 164,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2380307/",
+      "title": "Coco",
+      "year": 2017,
+      "rating": 8.4,
+      "metascore": 81,
+      "duration": "1h 45m",
+      "duration_min": 105,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt4154796/",
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "rating": 8.4,
+      "metascore": 78,
+      "duration": "3h 1m",
+      "duration_min": 181,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0119217/",
+      "title": "Good Will Hunting",
+      "year": 1997,
+      "rating": 8.3,
+      "metascore": 71,
+      "duration": "2h 6m",
+      "duration_min": 126,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0086879/",
+      "title": "Amadeus",
+      "year": 1984,
+      "rating": 8.4,
+      "metascore": 87,
+      "duration": "2h 40m",
+      "duration_min": 160,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Music"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0114709/",
+      "title": "Toy Story",
+      "year": 1995,
+      "rating": 8.3,
+      "metascore": 96,
+      "duration": "1h 21m",
+      "duration_min": 81,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt5311514/",
+      "title": "Your Name.",
+      "year": 2016,
+      "rating": 8.4,
+      "metascore": 81,
+      "duration": "1h 46m",
+      "duration_min": 106,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Drama",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0082096/",
+      "title": "Das Boot",
+      "year": 1981,
+      "rating": 8.4,
+      "metascore": 85,
+      "duration": "2h 29m",
+      "duration_min": 149,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0364569/",
+      "title": "Oldboy",
+      "year": 2003,
+      "rating": 8.3,
+      "metascore": 78,
+      "duration": "2h",
+      "duration_min": 120,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0057012/",
+      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "year": 1964,
+      "rating": 8.3,
+      "metascore": 97,
+      "duration": "1h 35m",
+      "duration_min": 95,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0112573/",
+      "title": "Braveheart",
+      "year": 1995,
+      "rating": 8.3,
+      "metascore": 68,
+      "duration": "2h 58m",
+      "duration_min": 178,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0119698/",
+      "title": "Princess Mononoke",
+      "year": 1997,
+      "rating": 8.3,
+      "metascore": 78,
+      "duration": "2h 13m",
+      "duration_min": 133,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0169547/",
+      "title": "American Beauty",
+      "year": 1999,
+      "rating": 8.3,
+      "metascore": 84,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1187043/",
+      "title": "3 Idiots",
+      "year": 2009,
+      "rating": 8.4,
+      "metascore": 67,
+      "duration": "2h 50m",
+      "duration_min": 170,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt8267604/",
+      "title": "Capernaum",
+      "year": 2018,
+      "rating": 8.4,
+      "metascore": 75,
+      "duration": "2h 6m",
+      "duration_min": 126,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt7286456/",
+      "title": "Joker",
+      "year": 2019,
+      "rating": 8.3,
+      "metascore": 59,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0045152/",
+      "title": "Singin' in the Rain",
+      "year": 1952,
+      "rating": 8.3,
+      "metascore": 99,
+      "duration": "1h 43m",
+      "duration_min": 103,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Musical",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0087843/",
+      "title": "Once Upon a Time in America",
+      "year": 1984,
+      "rating": 8.3,
+      "metascore": 75,
+      "duration": "3h 49m",
+      "duration_min": 229,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0091251/",
+      "title": "Come and See",
+      "year": 1985,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "2h 22m",
+      "duration_min": 142,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Thriller",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0180093/",
+      "title": "Requiem for a Dream",
+      "year": 2000,
+      "rating": 8.3,
+      "metascore": 71,
+      "duration": "1h 42m",
+      "duration_min": 102,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0086190/",
+      "title": "Star Wars: Episode VI - Return of the Jedi",
+      "year": 1983,
+      "rating": 8.3,
+      "metascore": 58,
+      "duration": "2h 11m",
+      "duration_min": 131,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0435761/",
+      "title": "Toy Story 3",
+      "year": 2010,
+      "rating": 8.3,
+      "metascore": 92,
+      "duration": "1h 43m",
+      "duration_min": 103,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2106476/",
+      "title": "The Hunt",
+      "year": 2012,
+      "rating": 8.3,
+      "metascore": 77,
+      "duration": "1h 55m",
+      "duration_min": 115,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0044741/",
+      "title": "Ikiru",
+      "year": 1952,
+      "rating": 8.3,
+      "metascore": 92,
+      "duration": "2h 23m",
+      "duration_min": 143,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1255953/",
+      "title": "Incendies",
+      "year": 2010,
+      "rating": 8.3,
+      "metascore": 80,
+      "duration": "2h 11m",
+      "duration_min": 131,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0338013/",
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "year": 2004,
+      "rating": 8.3,
+      "metascore": 89,
+      "duration": "1h 48m",
+      "duration_min": 108,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0053604/",
+      "title": "The Apartment",
+      "year": 1960,
+      "rating": 8.3,
+      "metascore": 94,
+      "duration": "2h 5m",
+      "duration_min": 125,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0056172/",
+      "title": "Lawrence of Arabia",
+      "year": 1962,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "3h 47m",
+      "duration_min": 227,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Biography",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0062622/",
+      "title": "2001: A Space Odyssey",
+      "year": 1968,
+      "rating": 8.3,
+      "metascore": 84,
+      "duration": "2h 29m",
+      "duration_min": 149,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0105236/",
+      "title": "Reservoir Dogs",
+      "year": 1992,
+      "rating": 8.3,
+      "metascore": 81,
+      "duration": "1h 39m",
+      "duration_min": 99,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0086250/",
+      "title": "Scarface",
+      "year": 1983,
+      "rating": 8.3,
+      "metascore": 65,
+      "duration": "2h 50m",
+      "duration_min": 170,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0113277/",
+      "title": "Heat",
+      "year": 1995,
+      "rating": 8.3,
+      "metascore": 76,
+      "duration": "2h 50m",
+      "duration_min": 170,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0036775/",
+      "title": "Double Indemnity",
+      "year": 1944,
+      "rating": 8.3,
+      "metascore": 95,
+      "duration": "1h 47m",
+      "duration_min": 107,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1049413/",
+      "title": "Up",
+      "year": 2009,
+      "rating": 8.3,
+      "metascore": 88,
+      "duration": "1h 36m",
+      "duration_min": 96,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0053125/",
+      "title": "North by Northwest",
+      "year": 1959,
+      "rating": 8.3,
+      "metascore": 98,
+      "duration": "2h 16m",
+      "duration_min": 136,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0986264/",
+      "title": "Like Stars on Earth",
+      "year": 2007,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "2h 42m",
+      "duration_min": 162,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0093058/",
+      "title": "Full Metal Jacket",
+      "year": 1987,
+      "rating": 8.2,
+      "metascore": 78,
+      "duration": "1h 56m",
+      "duration_min": 116,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0022100/",
+      "title": "M",
+      "year": 1931,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "1h 39m",
+      "duration_min": 99,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0033467/",
+      "title": "Citizen Kane",
+      "year": 1941,
+      "rating": 8.2,
+      "metascore": 100,
+      "duration": "1h 59m",
+      "duration_min": 119,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0211915/",
+      "title": "Amélie",
+      "year": 2001,
+      "rating": 8.3,
+      "metascore": 70,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0052357/",
+      "title": "Vertigo",
+      "year": 1958,
+      "rating": 8.2,
+      "metascore": 100,
+      "duration": "2h 8m",
+      "duration_min": 128,
+      "votes": null,
+      "genres": [
+        "Mystery",
+        "Romance",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1832382/",
+      "title": "A Separation",
+      "year": 2011,
+      "rating": 8.3,
+      "metascore": 95,
+      "duration": "2h 3m",
+      "duration_min": 123,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0095016/",
+      "title": "Die Hard",
+      "year": 1988,
+      "rating": 8.2,
+      "metascore": 72,
+      "duration": "2h 12m",
+      "duration_min": 132,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0056592/",
+      "title": "To Kill a Mockingbird",
+      "year": 1962,
+      "rating": 8.3,
+      "metascore": 88,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0070735/",
+      "title": "The Sting",
+      "year": 1973,
+      "rating": 8.2,
+      "metascore": 83,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0097576/",
+      "title": "Indiana Jones and the Last Crusade",
+      "year": 1989,
+      "rating": 8.2,
+      "metascore": 65,
+      "duration": "2h 7m",
+      "duration_min": 127,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0066921/",
+      "title": "A Clockwork Orange",
+      "year": 1971,
+      "rating": 8.2,
+      "metascore": 77,
+      "duration": "2h 16m",
+      "duration_min": 136,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0017136/",
+      "title": "Metropolis",
+      "year": 1927,
+      "rating": 8.2,
+      "metascore": 98,
+      "duration": "2h 33m",
+      "duration_min": 153,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0208092/",
+      "title": "Snatch",
+      "year": 2000,
+      "rating": 8.2,
+      "metascore": 55,
+      "duration": "1h 42m",
+      "duration_min": 102,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt8579674/",
+      "title": "1917",
+      "year": 2019,
+      "rating": 8.2,
+      "metascore": 78,
+      "duration": "1h 59m",
+      "duration_min": 119,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0119488/",
+      "title": "L.A. Confidential",
+      "year": 1997,
+      "rating": 8.2,
+      "metascore": 91,
+      "duration": "2h 18m",
+      "duration_min": 138,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0363163/",
+      "title": "Downfall",
+      "year": 2004,
+      "rating": 8.2,
+      "metascore": 82,
+      "duration": "2h 36m",
+      "duration_min": 156,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt5074352/",
+      "title": "Dangal",
+      "year": 2016,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "2h 41m",
+      "duration_min": 161,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Biography",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0040522/",
+      "title": "Bicycle Thieves",
+      "year": 1948,
+      "rating": 8.2,
+      "metascore": 100,
+      "duration": "1h 29m",
+      "duration_min": 89,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0993846/",
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "rating": 8.2,
+      "metascore": 75,
+      "duration": "3h",
+      "duration_min": 180,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Comedy",
+        "Crime"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt15398776/",
+      "title": "Oppenheimer",
+      "year": 2023,
+      "rating": 8.2,
+      "metascore": 90,
+      "duration": "3h",
+      "duration_min": 180,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0120382/",
+      "title": "The Truman Show",
+      "year": 1998,
+      "rating": 8.2,
+      "metascore": 90,
+      "duration": "1h 43m",
+      "duration_min": 103,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt6966692/",
+      "title": "Green Book",
+      "year": 2018,
+      "rating": 8.2,
+      "metascore": 69,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1130884/",
+      "title": "Shutter Island",
+      "year": 2010,
+      "rating": 8.2,
+      "metascore": 63,
+      "duration": "2h 18m",
+      "duration_min": 138,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt8503618/",
+      "title": "Hamilton",
+      "year": 2020,
+      "rating": 8.3,
+      "metascore": 88,
+      "duration": "2h 40m",
+      "duration_min": 160,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0372784/",
+      "title": "Batman Begins",
+      "year": 2005,
+      "rating": 8.2,
+      "metascore": 70,
+      "duration": "2h 20m",
+      "duration_min": 140,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0055031/",
+      "title": "Judgment at Nuremberg",
+      "year": 1961,
+      "rating": 8.3,
+      "metascore": 60,
+      "duration": "2h 59m",
+      "duration_min": 179,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0075314/",
+      "title": "Taxi Driver",
+      "year": 1976,
+      "rating": 8.2,
+      "metascore": 94,
+      "duration": "1h 54m",
+      "duration_min": 114,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0059578/",
+      "title": "For a Few Dollars More",
+      "year": 1965,
+      "rating": 8.2,
+      "metascore": 74,
+      "duration": "2h 12m",
+      "duration_min": 132,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0053291/",
+      "title": "Some Like It Hot",
+      "year": 1959,
+      "rating": 8.2,
+      "metascore": 98,
+      "duration": "2h 1m",
+      "duration_min": 121,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Music",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0107290/",
+      "title": "Jurassic Park",
+      "year": 1993,
+      "rating": 8.2,
+      "metascore": 68,
+      "duration": "2h 7m",
+      "duration_min": 127,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0469494/",
+      "title": "There Will Be Blood",
+      "year": 2007,
+      "rating": 8.2,
+      "metascore": 93,
+      "duration": "2h 38m",
+      "duration_min": 158,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0012349/",
+      "title": "The Kid",
+      "year": 1921,
+      "rating": 8.2,
+      "metascore": 100,
+      "duration": "1h 8m",
+      "duration_min": 68,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt10272386/",
+      "title": "The Father",
+      "year": 2020,
+      "rating": 8.2,
+      "metascore": 88,
+      "duration": "1h 37m",
+      "duration_min": 97,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0042192/",
+      "title": "All About Eve",
+      "year": 1950,
+      "rating": 8.2,
+      "metascore": 98,
+      "duration": "2h 18m",
+      "duration_min": 138,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0167404/",
+      "title": "The Sixth Sense",
+      "year": 1999,
+      "rating": 8.2,
+      "metascore": 64,
+      "duration": "1h 47m",
+      "duration_min": 107,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0089881/",
+      "title": "Ran",
+      "year": 1985,
+      "rating": 8.2,
+      "metascore": 97,
+      "duration": "2h 40m",
+      "duration_min": 160,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0112641/",
+      "title": "Casino",
+      "year": 1995,
+      "rating": 8.2,
+      "metascore": 73,
+      "duration": "2h 58m",
+      "duration_min": 178,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0477348/",
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "rating": 8.2,
+      "metascore": 92,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0084787/",
+      "title": "The Thing",
+      "year": 1982,
+      "rating": 8.2,
+      "metascore": 57,
+      "duration": "1h 49m",
+      "duration_min": 109,
+      "votes": null,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1745960/",
+      "title": "Top Gun: Maverick",
+      "year": 2022,
+      "rating": 8.2,
+      "metascore": 78,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1392214/",
+      "title": "Prisoners",
+      "year": 2013,
+      "rating": 8.2,
+      "metascore": 70,
+      "duration": "2h 33m",
+      "duration_min": 153,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0457430/",
+      "title": "Pan's Labyrinth",
+      "year": 2006,
+      "rating": 8.2,
+      "metascore": 98,
+      "duration": "1h 58m",
+      "duration_min": 118,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0105695/",
+      "title": "Unforgiven",
+      "year": 1992,
+      "rating": 8.2,
+      "metascore": 85,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0266697/",
+      "title": "Kill Bill: Vol. 1",
+      "year": 2003,
+      "rating": 8.2,
+      "metascore": 69,
+      "duration": "1h 51m",
+      "duration_min": 111,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0268978/",
+      "title": "A Beautiful Mind",
+      "year": 2001,
+      "rating": 8.2,
+      "metascore": 72,
+      "duration": "2h 15m",
+      "duration_min": 135,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0040897/",
+      "title": "The Treasure of the Sierra Madre",
+      "year": 1948,
+      "rating": 8.2,
+      "metascore": 98,
+      "duration": "2h 6m",
+      "duration_min": 126,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Western"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0252488/",
+      "title": "The Chaos Class Failed the Class",
+      "year": 1975,
+      "rating": 8.5,
+      "metascore": 100,
+      "duration": "1h 35m",
+      "duration_min": 95,
+      "votes": null,
+      "genres": [
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0347149/",
+      "title": "Howl's Moving Castle",
+      "year": 2004,
+      "rating": 8.2,
+      "metascore": 82,
+      "duration": "1h 59m",
+      "duration_min": 119,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0266543/",
+      "title": "Finding Nemo",
+      "year": 2003,
+      "rating": 8.2,
+      "metascore": 90,
+      "duration": "1h 40m",
+      "duration_min": 100,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0055630/",
+      "title": "Yojimbo",
+      "year": 1961,
+      "rating": 8.2,
+      "metascore": 93,
+      "duration": "1h 50m",
+      "duration_min": 110,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt4729430/",
+      "title": "Klaus",
+      "year": 2019,
+      "rating": 8.2,
+      "metascore": 65,
+      "duration": "1h 36m",
+      "duration_min": 96,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0057115/",
+      "title": "The Great Escape",
+      "year": 1963,
+      "rating": 8.2,
+      "metascore": 86,
+      "duration": "2h 52m",
+      "duration_min": 172,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0080678/",
+      "title": "The Elephant Man",
+      "year": 1980,
+      "rating": 8.2,
+      "metascore": 78,
+      "duration": "2h 4m",
+      "duration_min": 124,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0071853/",
+      "title": "Monty Python and the Holy Grail",
+      "year": 1975,
+      "rating": 8.2,
+      "metascore": 91,
+      "duration": "1h 31m",
+      "duration_min": 91,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0346336/",
+      "title": "The Best of Youth",
+      "year": 2003,
+      "rating": 8.4,
+      "metascore": 89,
+      "duration": "6h 14m",
+      "duration_min": 374,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0046912/",
+      "title": "Dial M for Murder",
+      "year": 1954,
+      "rating": 8.2,
+      "metascore": 75,
+      "duration": "1h 45m",
+      "duration_min": 105,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt32820897/",
+      "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+      "year": 2025,
+      "rating": 8.4,
+      "metascore": 67,
+      "duration": "2h 35m",
+      "duration_min": 155,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0031381/",
+      "title": "Gone with the Wind",
+      "year": 1939,
+      "rating": 8.2,
+      "metascore": 97,
+      "duration": "3h 58m",
+      "duration_min": 238,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1305806/",
+      "title": "The Secret in Their Eyes",
+      "year": 2009,
+      "rating": 8.2,
+      "metascore": 80,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0071315/",
+      "title": "Chinatown",
+      "year": 1974,
+      "rating": 8.1,
+      "metascore": 92,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0120735/",
+      "title": "Lock, Stock and Two Smoking Barrels",
+      "year": 1998,
+      "rating": 8.1,
+      "metascore": 67,
+      "duration": "1h 47m",
+      "duration_min": 107,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0434409/",
+      "title": "V for Vendetta",
+      "year": 2005,
+      "rating": 8.1,
+      "metascore": 62,
+      "duration": "2h 12m",
+      "duration_min": 132,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2096673/",
+      "title": "Inside Out",
+      "year": 2015,
+      "rating": 8.1,
+      "metascore": 94,
+      "duration": "1h 35m",
+      "duration_min": 95,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0042876/",
+      "title": "Rashomon",
+      "year": 1950,
+      "rating": 8.1,
+      "metascore": 98,
+      "duration": "1h 28m",
+      "duration_min": 88,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0264464/",
+      "title": "Catch Me If You Can",
+      "year": 2002,
+      "rating": 8.1,
+      "metascore": 75,
+      "duration": "2h 21m",
+      "duration_min": 141,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt5027774/",
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "year": 2017,
+      "rating": 8.1,
+      "metascore": 88,
+      "duration": "1h 55m",
+      "duration_min": 115,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0117951/",
+      "title": "Trainspotting",
+      "year": 1996,
+      "rating": 8.1,
+      "metascore": 83,
+      "duration": "1h 33m",
+      "duration_min": 93,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0050212/",
+      "title": "The Bridge on the River Kwai",
+      "year": 1957,
+      "rating": 8.1,
+      "metascore": 88,
+      "duration": "2h 41m",
+      "duration_min": 161,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1201607/",
+      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "year": 2011,
+      "rating": 8.1,
+      "metascore": 85,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0097165/",
+      "title": "Dead Poets Society",
+      "year": 1989,
+      "rating": 8.1,
+      "metascore": 79,
+      "duration": "2h 8m",
+      "duration_min": 128,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0116282/",
+      "title": "Fargo",
+      "year": 1996,
+      "rating": 8.1,
+      "metascore": 88,
+      "duration": "1h 38m",
+      "duration_min": 98,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0081398/",
+      "title": "Raging Bull",
+      "year": 1980,
+      "rating": 8.1,
+      "metascore": 90,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Sport"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1291584/",
+      "title": "Warrior",
+      "year": 2011,
+      "rating": 8.1,
+      "metascore": 71,
+      "duration": "2h 20m",
+      "duration_min": 140,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "Sport"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt29623480/",
+      "title": "The Wild Robot",
+      "year": 2024,
+      "rating": 8.2,
+      "metascore": 85,
+      "duration": "1h 42m",
+      "duration_min": 102,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0072684/",
+      "title": "Barry Lyndon",
+      "year": 1975,
+      "rating": 8.1,
+      "metascore": 89,
+      "duration": "3h 5m",
+      "duration_min": 185,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0052618/",
+      "title": "Ben-Hur",
+      "year": 1959,
+      "rating": 8.1,
+      "metascore": 90,
+      "duration": "3h 32m",
+      "duration_min": 212,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0405159/",
+      "title": "Million Dollar Baby",
+      "year": 2004,
+      "rating": 8.1,
+      "metascore": 86,
+      "duration": "2h 12m",
+      "duration_min": 132,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Sport"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1392190/",
+      "title": "Mad Max: Fury Road",
+      "year": 2015,
+      "rating": 8.1,
+      "metascore": 90,
+      "duration": "2h",
+      "duration_min": 120,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1205489/",
+      "title": "Gran Torino",
+      "year": 2008,
+      "rating": 8.1,
+      "metascore": 73,
+      "duration": "1h 56m",
+      "duration_min": 116,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0096283/",
+      "title": "My Neighbor Totoro",
+      "year": 1988,
+      "rating": 8.1,
+      "metascore": 87,
+      "duration": "1h 26m",
+      "duration_min": 86,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0118849/",
+      "title": "Children of Heaven",
+      "year": 1997,
+      "rating": 8.2,
+      "metascore": 77,
+      "duration": "1h 29m",
+      "duration_min": 89,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Family",
+        "Sport"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2119532/",
+      "title": "Hacksaw Ridge",
+      "year": 2016,
+      "rating": 8.1,
+      "metascore": 71,
+      "duration": "2h 19m",
+      "duration_min": 139,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2278388/",
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "rating": 8.1,
+      "metascore": 88,
+      "duration": "1h 39m",
+      "duration_min": 99,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2024544/",
+      "title": "12 Years a Slave",
+      "year": 2013,
+      "rating": 8.1,
+      "metascore": 96,
+      "duration": "2h 14m",
+      "duration_min": 134,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0112471/",
+      "title": "Before Sunrise",
+      "year": 1995,
+      "rating": 8.1,
+      "metascore": 79,
+      "duration": "1h 41m",
+      "duration_min": 101,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0083658/",
+      "title": "Blade Runner",
+      "year": 1982,
+      "rating": 8.1,
+      "metascore": 84,
+      "duration": "1h 57m",
+      "duration_min": 117,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0382932/",
+      "title": "Ratatouille",
+      "year": 2007,
+      "rating": 8.1,
+      "metascore": 96,
+      "duration": "1h 51m",
+      "duration_min": 111,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0353969/",
+      "title": "Memories of Murder",
+      "year": 2003,
+      "rating": 8.1,
+      "metascore": 82,
+      "duration": "2h 12m",
+      "duration_min": 132,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt10872600/",
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "rating": 8.2,
+      "metascore": 71,
+      "duration": "2h 28m",
+      "duration_min": 148,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0892769/",
+      "title": "How to Train Your Dragon",
+      "year": 2010,
+      "rating": 8.1,
+      "metascore": 75,
+      "duration": "1h 38m",
+      "duration_min": 98,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt2267998/",
+      "title": "Gone Girl",
+      "year": 2014,
+      "rating": 8.1,
+      "metascore": 79,
+      "duration": "2h 29m",
+      "duration_min": 149,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0198781/",
+      "title": "Monsters, Inc.",
+      "year": 2001,
+      "rating": 8.1,
+      "metascore": 79,
+      "duration": "1h 32m",
+      "duration_min": 92,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0073195/",
+      "title": "Jaws",
+      "year": 1975,
+      "rating": 8.1,
+      "metascore": 87,
+      "duration": "2h 4m",
+      "duration_min": 124,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Horror",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0107207/",
+      "title": "In the Name of the Father",
+      "year": 1993,
+      "rating": 8.1,
+      "metascore": 84,
+      "duration": "2h 13m",
+      "duration_min": 133,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1950186/",
+      "title": "Ford v Ferrari",
+      "year": 2019,
+      "rating": 8.1,
+      "metascore": 81,
+      "duration": "2h 32m",
+      "duration_min": 152,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Biography",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt3011894/",
+      "title": "Wild Tales",
+      "year": 2014,
+      "rating": 8.1,
+      "metascore": 77,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0015864/",
+      "title": "The Gold Rush",
+      "year": 1925,
+      "rating": 8.1,
+      "metascore": 90,
+      "duration": "1h 35m",
+      "duration_min": 95,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0015324/",
+      "title": "Sherlock Jr.",
+      "year": 1924,
+      "rating": 8.1,
+      "metascore": 100,
+      "duration": "45m",
+      "duration_min": 45,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0978762/",
+      "title": "Mary and Max",
+      "year": 2009,
+      "rating": 8.1,
+      "metascore": 72,
+      "duration": "1h 32m",
+      "duration_min": 92,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0077416/",
+      "title": "The Deer Hunter",
+      "year": 1978,
+      "rating": 8.1,
+      "metascore": 90,
+      "duration": "3h 3m",
+      "duration_min": 183,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0046268/",
+      "title": "The Wages of Fear",
+      "year": 1953,
+      "rating": 8.1,
+      "metascore": 85,
+      "duration": "2h 36m",
+      "duration_min": 156,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0017925/",
+      "title": "The General",
+      "year": 1926,
+      "rating": 8.1,
+      "metascore": 100,
+      "duration": "1h 18m",
+      "duration_min": 78,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt3315342/",
+      "title": "Logan",
+      "year": 2017,
+      "rating": 8.1,
+      "metascore": 77,
+      "duration": "2h 17m",
+      "duration_min": 137,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0031679/",
+      "title": "Mr. Smith Goes to Washington",
+      "year": 1939,
+      "rating": 8.1,
+      "metascore": 73,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0075148/",
+      "title": "Rocky",
+      "year": 1976,
+      "rating": 8.1,
+      "metascore": 70,
+      "duration": "2h",
+      "duration_min": 120,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Sport"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0047296/",
+      "title": "On the Waterfront",
+      "year": 1954,
+      "rating": 8.1,
+      "metascore": 91,
+      "duration": "1h 48m",
+      "duration_min": 108,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0046438/",
+      "title": "Tokyo Story",
+      "year": 1953,
+      "rating": 8.1,
+      "metascore": 100,
+      "duration": "2h 17m",
+      "duration_min": 137,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0050986/",
+      "title": "Wild Strawberries",
+      "year": 1957,
+      "rating": 8.1,
+      "metascore": 88,
+      "duration": "1h 32m",
+      "duration_min": 92,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0325980/",
+      "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "year": 2003,
+      "rating": 8.1,
+      "metascore": 63,
+      "duration": "2h 23m",
+      "duration_min": 143,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1895587/",
+      "title": "Spotlight",
+      "year": 2015,
+      "rating": 8.1,
+      "metascore": 93,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt15097216/",
+      "title": "Jai Bhim",
+      "year": 2021,
+      "rating": 8.6,
+      "metascore": 100,
+      "duration": "2h 44m",
+      "duration_min": 164,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt26548265/",
+      "title": "Maharaja",
+      "year": 2024,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "2h 21m",
+      "duration_min": 141,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0041959/",
+      "title": "The Third Man",
+      "year": 1949,
+      "rating": 8.1,
+      "metascore": 97,
+      "duration": "1h 44m",
+      "duration_min": 104,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Film-Noir",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0113247/",
+      "title": "La haine",
+      "year": 1995,
+      "rating": 8.1,
+      "metascore": 100,
+      "duration": "1h 38m",
+      "duration_min": 98,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0088247/",
+      "title": "The Terminator",
+      "year": 1984,
+      "rating": 8.1,
+      "metascore": 84,
+      "duration": "1h 47m",
+      "duration_min": 107,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0118715/",
+      "title": "The Big Lebowski",
+      "year": 1998,
+      "rating": 8.1,
+      "metascore": 71,
+      "duration": "1h 57m",
+      "duration_min": 117,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0059742/",
+      "title": "The Sound of Music",
+      "year": 1965,
+      "rating": 8.1,
+      "metascore": 63,
+      "duration": "2h 54m",
+      "duration_min": 174,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt5323662/",
+      "title": "A Silent Voice: The Movie",
+      "year": 2016,
+      "rating": 8.2,
+      "metascore": 78,
+      "duration": "2h 10m",
+      "duration_min": 130,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt30472557/",
+      "title": "Chainsaw Man - The Movie: Reze Arc",
+      "year": 2025,
+      "rating": 8.4,
+      "metascore": 71,
+      "duration": "1h 40m",
+      "duration_min": 100,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0036868/",
+      "title": "The Best Years of Our Lives",
+      "year": 1946,
+      "rating": 8.1,
+      "metascore": 93,
+      "duration": "2h 50m",
+      "duration_min": 170,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0050976/",
+      "title": "The Seventh Seal",
+      "year": 1957,
+      "rating": 8.1,
+      "metascore": 88,
+      "duration": "1h 36m",
+      "duration_min": 96,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt3170832/",
+      "title": "Room",
+      "year": 2015,
+      "rating": 8.1,
+      "metascore": 86,
+      "duration": "1h 58m",
+      "duration_min": 118,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0381681/",
+      "title": "Before Sunset",
+      "year": 2004,
+      "rating": 8.1,
+      "metascore": 91,
+      "duration": "1h 20m",
+      "duration_min": 80,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0395169/",
+      "title": "Hotel Rwanda",
+      "year": 2004,
+      "rating": 8.1,
+      "metascore": 79,
+      "duration": "2h 1m",
+      "duration_min": 121,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0091763/",
+      "title": "Platoon",
+      "year": 1986,
+      "rating": 8.1,
+      "metascore": 92,
+      "duration": "2h",
+      "duration_min": 120,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0317705/",
+      "title": "The Incredibles",
+      "year": 2004,
+      "rating": 8.0,
+      "metascore": 90,
+      "duration": "1h 55m",
+      "duration_min": 115,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0070047/",
+      "title": "The Exorcist",
+      "year": 1973,
+      "rating": 8.1,
+      "metascore": 83,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Horror"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1028532/",
+      "title": "Hachi: A Dog's Tale",
+      "year": 2009,
+      "rating": 8.1,
+      "metascore": 100,
+      "duration": "1h 33m",
+      "duration_min": 93,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1979320/",
+      "title": "Rush",
+      "year": 2013,
+      "rating": 8.1,
+      "metascore": 74,
+      "duration": "2h 3m",
+      "duration_min": 123,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "Sport"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0032138/",
+      "title": "The Wizard of Oz",
+      "year": 1939,
+      "rating": 8.1,
+      "metascore": 92,
+      "duration": "1h 42m",
+      "duration_min": 102,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0092005/",
+      "title": "Stand by Me",
+      "year": 1986,
+      "rating": 8.1,
+      "metascore": 75,
+      "duration": "1h 29m",
+      "duration_min": 89,
+      "votes": null,
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0129167/",
+      "title": "The Iron Giant",
+      "year": 1999,
+      "rating": 8.1,
+      "metascore": 85,
+      "duration": "1h 26m",
+      "duration_min": 86,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0019254/",
+      "title": "The Passion of Joan of Arc",
+      "year": 1928,
+      "rating": 8.1,
+      "metascore": 98,
+      "duration": "1h 54m",
+      "duration_min": 114,
+      "votes": null,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0476735/",
+      "title": "My Father and My Son",
+      "year": 2005,
+      "rating": 8.2,
+      "metascore": 100,
+      "duration": "1h 52m",
+      "duration_min": 112,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0058946/",
+      "title": "The Battle of Algiers",
+      "year": 1966,
+      "rating": 8.1,
+      "metascore": 96,
+      "duration": "2h 1m",
+      "duration_min": 121,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt4016934/",
+      "title": "The Handmaiden",
+      "year": 2016,
+      "rating": 8.1,
+      "metascore": 85,
+      "duration": "2h 25m",
+      "duration_min": 145,
+      "votes": null,
+      "genres": [
+        "Drama",
+        "Romance",
+        "Thriller"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0074958/",
+      "title": "Network",
+      "year": 1976,
+      "rating": 8.1,
+      "metascore": 83,
+      "duration": "2h 1m",
+      "duration_min": 121,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt1954470/",
+      "title": "Gangs of Wasseypur",
+      "year": 2012,
+      "rating": 8.2,
+      "metascore": 89,
+      "duration": "5h 21m",
+      "duration_min": 321,
+      "votes": null,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt4430212/",
+      "title": "Drishyam",
+      "year": 2015,
+      "rating": 8.2,
+      "metascore": 100,
+      "duration": "2h 43m",
+      "duration_min": 163,
+      "votes": null,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt11032374/",
+      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+      "year": 2020,
+      "rating": 8.2,
+      "metascore": 72,
+      "duration": "1h 57m",
+      "duration_min": 117,
+      "votes": null,
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0032551/",
+      "title": "The Grapes of Wrath",
+      "year": 1940,
+      "rating": 8.1,
+      "metascore": 96,
+      "duration": "2h 9m",
+      "duration_min": 129,
+      "votes": null,
+      "genres": [
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0035446/",
+      "title": "To Be or Not to Be",
+      "year": 1942,
+      "rating": 8.1,
+      "metascore": 86,
+      "duration": "1h 39m",
+      "duration_min": 99,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Romance",
+        "War"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    },
+    {
+      "url": "https://www.imdb.com/title/tt21626284/",
+      "title": "Lost Ladies",
+      "year": 2023,
+      "rating": 8.3,
+      "metascore": 100,
+      "duration": "2h 2m",
+      "duration_min": 122,
+      "votes": null,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "anomaly_rating_iqr": false,
+      "anomaly_metascore_iqr": false,
+      "is_anomaly": false
+    }
+  ]
+}

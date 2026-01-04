@@ -1,0 +1,207 @@
+{
+  "rating_hist": [
+    8.0,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1,
+    8.1
+  ],
+  "metascore_hist": [],
+  "scatter": [
+    {
+      "title": "The Incredibles",
+      "rating": 8.0,
+      "metascore": null,
+      "duration_min": 115,
+      "votes": null
+    },
+    {
+      "title": "The Sound of Music",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 174,
+      "votes": null
+    },
+    {
+      "title": "Stand by Me",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 89,
+      "votes": null
+    },
+    {
+      "title": "Fargo",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 98,
+      "votes": null
+    },
+    {
+      "title": "Catch Me If You Can",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 141,
+      "votes": null
+    },
+    {
+      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 130,
+      "votes": null
+    },
+    {
+      "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 143,
+      "votes": null
+    },
+    {
+      "title": "Jaws",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 124,
+      "votes": null
+    },
+    {
+      "title": "Ben-Hur",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 212,
+      "votes": null
+    },
+    {
+      "title": "The Terminator",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 107,
+      "votes": null
+    },
+    {
+      "title": "Dead Poets Society",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 128,
+      "votes": null
+    },
+    {
+      "title": "Gone Girl",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 149,
+      "votes": null
+    },
+    {
+      "title": "The Handmaiden",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 145,
+      "votes": null
+    },
+    {
+      "title": "Ratatouille",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 111,
+      "votes": null
+    },
+    {
+      "title": "Ford v Ferrari",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 152,
+      "votes": null
+    },
+    {
+      "title": "The Grand Budapest Hotel",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 99,
+      "votes": null
+    },
+    {
+      "title": "Hacksaw Ridge",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 139,
+      "votes": null
+    },
+    {
+      "title": "The Wizard of Oz",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 102,
+      "votes": null
+    },
+    {
+      "title": "Network",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 121,
+      "votes": null
+    },
+    {
+      "title": "The Big Lebowski",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 117,
+      "votes": null
+    },
+    {
+      "title": "Memories of Murder",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 132,
+      "votes": null
+    },
+    {
+      "title": "Mad Max: Fury Road",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 120,
+      "votes": null
+    },
+    {
+      "title": "Blade Runner",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 117,
+      "votes": null
+    },
+    {
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 115,
+      "votes": null
+    },
+    {
+      "title": "How to Train Your Dragon",
+      "rating": 8.1,
+      "metascore": null,
+      "duration_min": 98,
+      "votes": null
+    }
+  ]
+}
