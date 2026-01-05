@@ -30,7 +30,7 @@ Bu repo, IMDB’den film verisi toplayıp (Selenium + fallback), veriyi temizley
   1. Depoyu klonlayın ve dizine girin
 
   ```bash
-  git clone https://github.com/<your-username>/IMDBScraperwSelenium.git
+  git clone git@github.com:exhilarin/IMDB-Insights-Advanced-Data-Analytics-Reactive-Dashboard.git
   cd IMDBScraperwSelenium
   ```
 
