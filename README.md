@@ -1,187 +1,122 @@
-# IMDBScraperwSelenium — IMDB Data Science Pipeline + React Dashboard
+# IMDB Data Pipeline & React Dashboard — Quickstart
 
-Bu repo, IMDB’den film verisi toplayıp (Selenium + fallback), veriyi temizleyip (duration parse + median imputation) IQR istatistikleri ile analiz eden ve anomalileri işaretleyen **uçtan uca** bir veri bilimi projesidir. Sonuçlar `movies_final.json` olarak dışa aktarılır ve React dashboard tarafından görselleştirilir.
+Bu repo IMDB Top-250 Movies ve Top-250 TV Shows verilerini kazıyıp (Selenium + fallback), veriyi temizleyip anomali tespiti yaptıktan sonra bir React dashboard ile görselleştiren bir ETL + dashboard projesidir. React uygulaması `frontend/public/movies_final.json` dosyasını okuyarak görselleştirme yapar.
 
-## Proje çıktıları (ödev hedefi)
+Bu README, projeyi klonlayan birinin sadece README'yi okuyarak ve scriptleri çalıştırarak uygulamayı ayağa kaldırabilmesi için adım adım, copy‑paste dostu komutlar içerir.
 
-**Python (ETL + analiz):**
+## Hızlı önkoşullar
 
-- IMDB’den alanlar: `title`, `year`, `rating`, `metascore`, `duration_min`, `genres`, `votes`, `url`
-- Veri temizleme:
+- Linux / macOS (Windows için WSL önerilir)
+- Python 3.10+ (sanal ortam / venv kullanılması önerilir)
+- Node.js + npm (Node 16+ önerilir)
+- Opsiyonel: Chrome çalışır/kuruluysa Selenium tam işlevseldir; requests-tabanlı fallback da vardır.
 
-  # IMDBScraperwSelenium — Hızlı Başlatma (copy-paste ready)
+## Tek komutla başlatma (önerilen)
 
-  Bu repo IMDB Top-250 Movies ve Top-250 TV Shows verilerini toplayan (Selenium + fallback), temizleyen ve anomali tespiti yaptıktan sonra bir React dashboard ile görselleştiren bir ETL + dashboard projesidir.
+Projede bir yardımcı betik var; bu betik Python virtualenv oluşturur, Python bağımlılıklarını kurar, veri pipeline'ını arka planda başlatır ve React dev-server'ı başlatır.
 
-  Amaç: repoyu klonlayan birinin, terminale README'den kopyala-yapıştır ile aynı sonucu (250 film + 250 dizi → `frontend/public/movies_final.json`) alabilmesini sağlamaktır.
+Çalıştırmak için repoyu klonlayın, dizine girin ve betiği çalıştırın:
 
-  ## Gereksinimler
+```bash
+git clone <repo-url>
+cd <repo>
+bash scripts/run_all.sh
+```
 
-  # Cinematic Data Insights & Anomaly Detection Dashboard
+run_all.sh şunları yapar:
+- `venv` oluşturur (varsa mevcut venv'i kullanır)
+- `pip install -r requirements.txt`
+- `data_processor.py`'yi arka planda başlatır (log -> `logs/data_processor.log`, pid -> `logs/data_processor.pid`)
+- frontend bağımlılıklarını kurar ve React dev-server'ı başlatır (log -> `logs/react.log`, pid -> `logs/react.pid`)
 
-  ## 1) PROJE ÖZETİ
+NOT: Eğer makinenizde zaten 3000/3001 gibi portlar doluysa betik frontend'i farklı bir portta başlatabilir veya hata verebilir — log dosyalarına bakın.
 
-  **Proje Adı:** Cinematic Data Insights & Anomaly Detection Dashboard
+## Manuel (adım adım) kurulum ve çalışma
 
-  Bu proje; Selenium ile IMDb verilerini kazıma (scraping), Pandas ile veri temizleme ve ön işlem, ve React ile interaktif görselleştirme kullanarak 250 film ve 250 dizi içeren bir dashboard sunar. Amaç; temizlenmiş, anomali etiketli ve görselleştirmeye hazır tek bir JSON dosyası üretmek ve bunu React uygulamasıyla sunmaktır.
+1) Python ortamı (venv) oluşturun ve bağımlılıkları kurun:
 
-  Kullanılan ana teknolojiler:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
-  - Python (Selenium, requests, BeautifulSoup, pandas)
-  - React (Create React App) + Recharts
+2) Veri pipeline'ını çalıştırın (örnek; tamamlanana kadar sürebilir):
 
-  ***
+```bash
+python data_processor.py --limit 250 --threads 16
+```
 
-  ## 2) KURULUM VE ÇALIŞTIRMA (Copy‑paste dostu, sıralı komutlar)
+Varsayılan davranış: pipeline çalışırken ara kaydetmeler (autosave) yapar. Bu ara kaydetmeler artık ana `movies_final.json` dosyasını bozmamak için `frontend/public/movies_final_autosave.json` ve `frontend/src/movies_final_autosave.json` olarak yazılır. Final, tamamlandığında `frontend/public/movies_final.json` ve `frontend/src/movies_final.json` üzerine yazılır.
 
-  Aşağıdaki adımlar `bash` için doğrudan kopyalanıp çalıştırılabilir.
+Eğer ara kaydetme istemiyorsanız (tek, kararlı yazma istiyorsanız):
 
-  Adım 1 — Python bağımlılıklarını kurun:
+```bash
+python data_processor.py --limit 250 --threads 16 --autosave-every 0
+```
 
-  ```bash
-  pip install -r requirements.txt
-  ```
+3) Frontend'i başlatın (ayrı terminalde):
 
-  Adım 2 — Veriyi çekme ve işleme (250 film + 250 dizi):
+```bash
+cd frontend
+npm install
+# İsterseniz PORT değişkeni ile farklı portta çalıştırın:
+PORT=3000 npm start
+```
 
-  ```bash
-  python data_processor.py
-  ```
+Tarayıcınızdan `http://localhost:3000` (veya kullandığınız PORT) adresine gidin.
 
-  Not: `data_processor.py` çalıştırıldığında proje köküne göre hem
+## Nerede ne kaydediliyor
 
-  - `frontend/public/movies_final.json` (frontend tarafından sunulan dosya)
-  - `frontend/src/movies_final.json` (geliştirme/reference kopyası)
+- `frontend/public/movies_final.json` — React dev-server tarafından sunulan ve frontend'in `fetch('/movies_final.json')` ile okuduğu ana dosya. Final pipeline bitince bu dosya güncellenir.
+- `frontend/public/movies_final_autosave.json` — pipeline'in ara kaydetmeleri için ayrılmış dosya (dev-server tarafından kullanılmaz).
+- `frontend/src/movies_final.json` ve `frontend/src/movies_final_autosave.json` — geliştirici/reference kopyaları.
+- `logs/data_processor.log`, `logs/react.log` — ilgili servislerin logları.
 
-  olarak kaydedilir. React uygulaması tarayıcıda `/movies_final.json` yolundan (public) bu dosyayı yükler, dolayısıyla en kritik hedef `frontend/public/movies_final.json`'dur.
+## Durdurma ve temizleme
 
-  Adım 3 — Dashboard'u başlatın:
+Projeyi durdurmak için sağlanan script:
 
-  ```bash
-  cd frontend
-  npm install
-  npm start
-  ```
+```bash
+bash scripts/stop_all.sh
+```
 
-  Tarayıcı otomatik açılmıyorsa http://localhost:3000 adresini ziyaret edin.
+Manuel olarak PID'leri sonlandırmak isterseniz (uygulama açık ve kaydedilmiş PID dosyaları varsa):
 
-  ***
+```bash
+kill $(cat logs/data_processor.pid)      # pipeline
+kill $(cat logs/react.pid)               # react dev server
+```
 
-  ## 3) TEKNİK ANALİZ NOTLARI (Hoca için kısa ve teknik)
+## Hızlı doğrulama / hata ayıklama
 
-  ### Veri Temizleme
+- `tail -f logs/data_processor.log` — pipeline ilerlemesini izleyin (autosave mesajları burada görünür).
+- `tail -f logs/react.log` — frontend başlatma ve hata mesajları.
+- `ls -l frontend/public/movies_final.json` — final dosyanın varlığını ve son değiştirilme zamanını kontrol edin.
+- Eğer frontend boş/404 hatası veriyorsa, `frontend/public/movies_final.json` bulunup bulunmadığını kontrol edin; eğer sadece `movies_final_autosave.json` varsa pipeline henüz tamamlanmamış demektir.
 
-  - Eksik Metascore'lar: Eksik `metascore` değerleri ilgili sütun medyanı ile doldurulur (median imputation). Medyan seçimi uç değerlerin etkisini azaltır.
+## Neden frontend sürekli güncelleniyordu (kısa açıklama)
 
-    Örnek (pandas):
+Önceki pipeline sürümünde ara kaydetmeler doğrudan `frontend/public/movies_final.json`'i üzerine yazıyordu; React dev-server bu dosya değiştiğinde hot-reload tetikleyip UI'yi yeniden yüklüyordu. Bu durumda frontend kısmi/eksik veriler üzerine defalarca yeni hesaplama yapıyordu ve anomali sayıları değişiyordu.
 
-  ```python
-  median_m = df['metascore'].median()
-  df['metascore'].fillna(median_m, inplace=True)
-  ```
+Güncelleme: autosave artık `movies_final_autosave.json` dosyasına yazıyor; böylece frontend yalnızca pipeline tamamlandığında (final yazıldığında) bir kere güncellenecek.
 
-  - Duration dönüşümü: IMDb'den gelen süreler string formatında olabilir (ör. "2h 22min", "45 min"). `parse_duration_to_minutes` fonksiyonu bu stringleri dakika cinsine çevirir ve `duration_min` sütununa yazar.
+## Push / paylaşım (kısa not)
 
-    Örnek (konsept):
+README'yi güncelledikten sonra değişiklikleri commit ve pushlamak için:
 
-  ```python
-  def parse_duration_to_minutes(s):
-      # "2h 22min" -> 142, "45 min" -> 45
-      ...
-  ```
+```bash
+git add README.md
+git commit -m "docs: improve README with quickstart and autosave notes"
+git push origin main
+```
 
-  ### Anomali Tespiti — IQR yöntemi
+Not: `git push` sırasında kimlik doğrulama istenebilir; SSH anahtarınız veya Git credentials ayarlarınızın hazır olduğundan emin olun.
 
-  Projede uç değer/anomali tespiti için IQR (Interquartile Range) kullanılmıştır. Adımlar:
+## Eğer isterseniz ben de yardımcı olurum
 
-  1. Q1 = 25. yüzdelik, Q3 = 75. yüzdelik
-  2. IQR = Q3 − Q1
-  3. Alt/üst eşikler: lower = Q1 − 1.5×IQR, upper = Q3 + 1.5×IQR
-  4. Bu eşiklerin dışındaki gözlemler anomali olarak işaretlenir.
+- README'yi başka dile (İngilizce) çevirip aynı şekilde ekleyebilirim.
+- `run_all.sh`'i daha idempotent veya daha kontrollü hale getirecek küçük geliştirmeler (örn. port kontrol, daha iyi PID handling) ekleyebilirim.
 
-  Matematiksel gösterim:
+İsterseniz şimdi README'yi commit edip pushlamanız için gerekli komutları çalıştırabilirim (veya size komutları veririm). Hemen ardından başka bir bilgisayarda README'yi takip ederek tam bir test yapabilirsiniz.
 
-  $$\mathrm{IQR} = Q_3 - Q_1$$
-  $$\text{lower} = Q_1 - 1.5 \times \mathrm{IQR}$$
-  $$\text{upper} = Q_3 + 1.5 \times \mathrm{IQR}$$
-
-  Uygulamada hem `IMDB` puanı, hem `metascore` hem de bunların farkı (delta) üzerinde IQR analizi yapılabilir. Örneğin `delta = IMDB - (Metascore/10)` hesaplanıp bu delta üzerinde IQR uygulanırsa, iki skor arasındaki tutarsızlıklar tespit edilir.
-
-  ***
-
-  ## 4) KLASÖR YAPISI (projede olması gereken temiz şema)
-
-  ```
-  / (repository root)
-  ├─ data_processor.py         # Veriyi çeken ve işleyen ana Python scripti (yazma hedefleri aşağıda)
-  ├─ requirements.txt          # Python bağımlılıkları
-  ├─ README.md                 # (BU DOSYA)
-  ├─ frontend/                 # React uygulaması (Create React App)
-  │  ├─ package.json
-  │  ├─ public/
-  │  │  └─ movies_final.json   # ÖNEMLİ: frontend dev server tarafından /movies_final.json olarak sunulur
-  │  └─ src/
-  │     ├─ App.js
-  │     ├─ index.js
-  │     └─ movies_final.json   # opsiyonel/ek kopya (data_processor.py hem public hem src'ye yazar)
-  └─ scripts/
-     ├─ run_all.sh
-     └─ stop_all.sh
-  ```
-
-  Not: Frontend kodu tarayıcıda `fetch('/movies_final.json')` ile dosyayı yükler; bu yüzden `frontend/public/movies_final.json` varlığı çalışması için kritik önemdedir.
-
-  ***
-
-  ## 5) GÖRSEL REHBER (Kullanıcı için kısa)
-
-  - Sekmeler / filtreler:
-
-    - Uygulama üstünde "Movies" ve "TV Shows" (veya benzeri) bir seçim bulunduğunda bu seçim `type` filtresini değiştirir ve grafikler/table verilerini yeniden çizer.
-
-  - Box-plot:
-
-    - IMDB puanının dağılımını gösterir (Q1, median, Q3, whiskers). Fare ile üzerine gelindiğinde tooltip içinde Q1, median, Q3, count gibi özet istatistikler gösterilir.
-
-  - Scatter plot:
-    - Örnek: x = IMDB, y = Metascore. Her noktanın üzerine gelindiğinde tooltip içinde başlık, yıl, IMDB, Metascore, duration gibi bilgiler görünür.
-
-  Kullanım ipucu: Anomali olarak işaretlenen noktalara tıklanınca (veya hover) tooltip ya da yan panelde neden anomali olduğu açıklanır (ör. "High rating + low metascore") — frontend `App.js` içinde bu mantık uygulanmıştır.
-
-  ***
-
-  ## HIZLI DOĞRULAMA (kısa komutlar)
-
-  - `frontend/public/movies_final.json` dosyasının varlığını kontrol edin:
-
-  ```bash
-  ls -l frontend/public/movies_final.json
-  ```
-
-  - Kayıt sayısını kontrol edin (JSON'in top-level yapısına göre uyarlayın):
-
-  ```bash
-  python - <<'PY'
-  import json
-  p='frontend/public/movies_final.json'
-  data=json.load(open(p))
-  if isinstance(data, list):
-      print('records:', len(data))
-  elif isinstance(data, dict) and 'records' in data:
-      print('records:', len(data['records']))
-  else:
-      print('JSON loaded, top-level type:', type(data))
-  PY
-  ```
-
-  ***
-
-  ## EK NOTLAR
-
-  - `data_processor.py` çalıştırması uzun sürebilir (Selenium ve ağ gecikmeleri). Terminal çıktısını veya log dosyalarını kontrol edin.
-  - Önerilen sürümler: Python 3.10+, Node.js 16+.
-  - Eğer frontend `fetch('/movies_final.json')` hatası veriyorsa, `frontend/public/movies_final.json` dosyasının bulunup bulunmadığını ve dosya izinlerini kontrol edin.
-
-  Herhangi bir adımda hata alırsanız terminal çıktısını paylaşın; README'yi hemen düzelteyim veya gerekli küçük ek scriptleri (ör. `Makefile`) ekleyeyim.
-
-  İyi çalışmalar!
