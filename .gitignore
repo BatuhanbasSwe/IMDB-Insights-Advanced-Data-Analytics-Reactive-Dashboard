@@ -19,3 +19,5 @@ npm-debug.log*
 .env
 venv/
 .venv/
+frontend/public/movies_final_autosave.json
+frontend/src/movies_final_autosave.json

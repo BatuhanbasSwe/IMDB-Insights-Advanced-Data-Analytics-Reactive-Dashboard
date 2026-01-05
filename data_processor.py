@@ -421,15 +421,33 @@ def iqr_outliers(series: pd.Series) -> Tuple[Dict[str, float], pd.Series]:
 warnings.filterwarnings("ignore", message="Mean of empty slice")
 
 
-def write_react_json(payload: Dict):
+def write_react_json(payload: Dict, out_src: Optional[str] = None, out_public: Optional[str] = None):
+    """Write the given payload into the frontend `src` and `public` folders.
+
+    By default this writes to `frontend/src/movies_final.json` and
+    `frontend/public/movies_final.json`. Callers (such as autosave during
+    scraping) can pass alternative relative paths (relative to the repo root)
+    or absolute paths to avoid clobbering the primary file while the
+    pipeline is still running.
+    """
     repo_root = os.path.dirname(os.path.abspath(__file__))
-    # Final release writes into frontend/ so the React app can be launched from
-    # the `frontend` directory. Keep both a public copy and a src copy for
-    # reference (src copy is optional but helpful for packaging in the repo).
-    out_src = os.path.join(repo_root, "frontend", "src", "movies_final.json")
-    out_public = os.path.join(repo_root, "frontend", "public", "movies_final.json")
-    os.makedirs(os.path.dirname(out_src), exist_ok=True)
-    os.makedirs(os.path.dirname(out_public), exist_ok=True)
+    # Default paths inside the repo
+    default_src = os.path.join("frontend", "src", "movies_final.json")
+    default_public = os.path.join("frontend", "public", "movies_final.json")
+
+    # Resolve provided paths (allow absolute paths as well)
+    def _resolve(p, default):
+        if p is None:
+            return os.path.join(repo_root, default)
+        if os.path.isabs(p):
+            return p
+        return os.path.join(repo_root, p)
+
+    out_src_path = _resolve(out_src, default_src)
+    out_public_path = _resolve(out_public, default_public)
+
+    os.makedirs(os.path.dirname(out_src_path), exist_ok=True)
+    os.makedirs(os.path.dirname(out_public_path), exist_ok=True)
 
     def _sanitize(obj):
         if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
@@ -441,9 +459,9 @@ def write_react_json(payload: Dict):
         return obj
 
     payload = _sanitize(payload)
-    with open(out_src, "w", encoding="utf-8") as f:
+    with open(out_src_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2, allow_nan=False)
-    with open(out_public, "w", encoding="utf-8") as f:
+    with open(out_public_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2, allow_nan=False)
 
 
@@ -552,7 +570,13 @@ def main(argv: Optional[List[str]] = None):
                     "summary": {"n_records": int(len(df_tmp))},
                     "records": df_tmp.where(pd.notna(df_tmp), None).to_dict(orient="records"),
                 }
-                write_react_json(payload_tmp)
+                # Write autosave to a separate file so the frontend dev server
+                # doesn't pick up partial results and constantly reload.
+                write_react_json(
+                    payload_tmp,
+                    out_src="frontend/src/movies_final_autosave.json",
+                    out_public="frontend/public/movies_final_autosave.json",
+                )
                 print(f"autosaved partial JSON ({done}/{total})", flush=True)
 
     # final cleanup and analytics
@@ -616,7 +640,7 @@ def main(argv: Optional[List[str]] = None):
     }
 
     write_react_json(payload)
-    print(f"Saved {len(df)} records -> imdb-dashboard/public/movies_final.json and imdb-dashboard/src/movies_final.json")
+    print(f"Saved {len(df)} records -> frontend/public/movies_final.json and frontend/src/movies_final.json")
 
 
 if __name__ == "__main__":
