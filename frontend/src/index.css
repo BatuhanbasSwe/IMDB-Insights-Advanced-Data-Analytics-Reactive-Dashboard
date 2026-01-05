@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: #071233;
+  color: #e6eef8;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.toolbar {
+  width: 100%;
+}
+.chartsRow {
+  width: 100%;
+}
+.tableWrap {
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+}

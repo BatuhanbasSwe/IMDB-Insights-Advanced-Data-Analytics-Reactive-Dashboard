@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: #071233;
+}
+.App-link {
+  color: #61dafb;
+}
+
+/* Responsive helpers */
+.toolbar {
+  width: 100%;
+}
+.chartsRow {
+  width: 100%;
+}
+.tableWrap {
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+}
