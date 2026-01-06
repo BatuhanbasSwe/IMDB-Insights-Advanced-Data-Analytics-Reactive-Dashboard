@@ -152,6 +152,8 @@ function getAnomalyReasons(r) {
   if (r?.anomaly_duration_outlier) reasons.push("Duration outlier (IQR)");
   if (r?.anomaly_rating_votes_inconsistent)
     reasons.push("Rating-votes inconsistency (residual)");
+  if (r?.anomaly_rating_iqr) reasons.push("Rating outlier (IQR)");
+  if (r?.anomaly_metascore_iqr) reasons.push("Metascore outlier (IQR)");
   return reasons;
 }
 
@@ -780,7 +782,7 @@ export default function App() {
       <section
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "0.8fr 2fr",
           gap: 12,
           marginBottom: 12,
         }}
@@ -788,16 +790,130 @@ export default function App() {
         <div style={styles.chartCard}>
           <h3 style={{ margin: 0 }}>Rating Distribution (Box-and-Whisker)</h3>
           <RechartsBoxPlot stats={ratingStats} />
-          <div style={{ marginTop: 8, color: "#9fb0d8", fontSize: 13 }}>
-            Q1: {ratingStats ? ratingStats.q1.toFixed(2) : "-"} | Median:{" "}
-            {ratingStats ? ratingStats.median.toFixed(2) : "-"} | Q3:{" "}
-            {ratingStats ? ratingStats.q3.toFixed(2) : "-"}
-          </div>
+
+          {ratingStats && (
+            <div style={{ marginTop: 16 }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 8,
+                  marginBottom: 12,
+                }}
+              >
+                <div
+                  style={{
+                    background: "#0b163d",
+                    border: "1px solid #153049",
+                    padding: 10,
+                    borderRadius: 8,
+                  }}
+                >
+                  <div
+                    style={{ fontSize: 11, color: "#9fb0d8", marginBottom: 4 }}
+                  >
+                    Q1 (25%)
+                  </div>
+                  <div
+                    style={{ fontSize: 18, fontWeight: 700, color: "#7dd3fc" }}
+                  >
+                    {ratingStats.q1.toFixed(2)}
+                  </div>
+                </div>
+                <div
+                  style={{
+                    background: "#0b163d",
+                    border: "1px solid #153049",
+                    padding: 10,
+                    borderRadius: 8,
+                  }}
+                >
+                  <div
+                    style={{ fontSize: 11, color: "#9fb0d8", marginBottom: 4 }}
+                  >
+                    Median (50%)
+                  </div>
+                  <div
+                    style={{ fontSize: 18, fontWeight: 700, color: "#7dd3fc" }}
+                  >
+                    {ratingStats.median.toFixed(2)}
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 8,
+                }}
+              >
+                <div
+                  style={{
+                    background: "#0b163d",
+                    border: "1px solid #153049",
+                    padding: 10,
+                    borderRadius: 8,
+                  }}
+                >
+                  <div
+                    style={{ fontSize: 11, color: "#9fb0d8", marginBottom: 4 }}
+                  >
+                    Q3 (75%)
+                  </div>
+                  <div
+                    style={{ fontSize: 18, fontWeight: 700, color: "#7dd3fc" }}
+                  >
+                    {ratingStats.q3.toFixed(2)}
+                  </div>
+                </div>
+                <div
+                  style={{
+                    background: "#0b163d",
+                    border: "1px solid #153049",
+                    padding: 10,
+                    borderRadius: 8,
+                  }}
+                >
+                  <div
+                    style={{ fontSize: 11, color: "#9fb0d8", marginBottom: 4 }}
+                  >
+                    Mean
+                  </div>
+                  <div
+                    style={{ fontSize: 18, fontWeight: 700, color: "#7dd3fc" }}
+                  >
+                    {ratingStats.mean.toFixed(2)}
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  marginTop: 12,
+                  padding: 10,
+                  background: "#0b163d",
+                  border: "1px solid #153049",
+                  borderRadius: 8,
+                  textAlign: "center",
+                }}
+              >
+                <div style={{ fontSize: 12, color: "#9fb0d8" }}>
+                  IQR:{" "}
+                  <span style={{ color: "#7dd3fc", fontWeight: 600 }}>
+                    {ratingStats.iqr.toFixed(2)}
+                  </span>{" "}
+                  | Count:{" "}
+                  <span style={{ color: "#7dd3fc", fontWeight: 600 }}>
+                    {ratingStats.count}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div style={styles.chartCard}>
           <h3 style={{ margin: 0 }}>Rating vs Metascore (Scatter)</h3>
-          <div style={{ width: "100%", height: 340, marginTop: 8 }}>
+          <div style={{ width: "100%", height: 380, marginTop: 8 }}>
             <ResponsiveContainer width="100%" height="100%">
               <ScatterChart
                 margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
@@ -896,59 +1012,141 @@ export default function App() {
             <thead>
               <tr>
                 <th
+                  onClick={() => {
+                    if (sortBy === "title")
+                      setSortDir(sortDir === "asc" ? "desc" : "asc");
+                    else {
+                      setSortBy("title");
+                      setSortDir("asc");
+                    }
+                  }}
                   style={{
                     textAlign: "left",
                     fontSize: 12,
                     color: "#9fb0d8",
                     padding: "10px 10px",
                     borderBottom: "1px solid #1f2a44",
+                    cursor: "pointer",
                   }}
                 >
-                  Title
+                  <span style={{ display: "inline-block", width: "40px" }}>
+                    Title
+                  </span>
+                  <span style={{ display: "inline-block", width: "16px" }}>
+                    {sortBy === "title" ? (sortDir === "asc" ? "↑" : "↓") : " "}
+                  </span>
                 </th>
                 <th
+                  onClick={() => {
+                    if (sortBy === "year")
+                      setSortDir(sortDir === "asc" ? "desc" : "asc");
+                    else {
+                      setSortBy("year");
+                      setSortDir("asc");
+                    }
+                  }}
                   style={{
                     textAlign: "left",
                     fontSize: 12,
                     color: "#9fb0d8",
                     padding: "10px 10px",
                     borderBottom: "1px solid #1f2a44",
+                    cursor: "pointer",
                   }}
                 >
-                  Year
+                  <span style={{ display: "inline-block", width: "35px" }}>
+                    Year
+                  </span>
+                  <span style={{ display: "inline-block", width: "16px" }}>
+                    {sortBy === "year" ? (sortDir === "asc" ? "↑" : "↓") : " "}
+                  </span>
                 </th>
                 <th
+                  onClick={() => {
+                    if (sortBy === "rating")
+                      setSortDir(sortDir === "asc" ? "desc" : "asc");
+                    else {
+                      setSortBy("rating");
+                      setSortDir("desc");
+                    }
+                  }}
                   style={{
                     textAlign: "left",
                     fontSize: 12,
                     color: "#9fb0d8",
                     padding: "10px 10px",
                     borderBottom: "1px solid #1f2a44",
+                    cursor: "pointer",
                   }}
                 >
-                  Rating
+                  <span style={{ display: "inline-block", width: "45px" }}>
+                    Rating
+                  </span>
+                  <span style={{ display: "inline-block", width: "16px" }}>
+                    {sortBy === "rating"
+                      ? sortDir === "asc"
+                        ? "↑"
+                        : "↓"
+                      : " "}
+                  </span>
                 </th>
                 <th
+                  onClick={() => {
+                    if (sortBy === "metascore")
+                      setSortDir(sortDir === "asc" ? "desc" : "asc");
+                    else {
+                      setSortBy("metascore");
+                      setSortDir("desc");
+                    }
+                  }}
                   style={{
                     textAlign: "left",
                     fontSize: 12,
                     color: "#9fb0d8",
                     padding: "10px 10px",
                     borderBottom: "1px solid #1f2a44",
+                    cursor: "pointer",
                   }}
                 >
-                  Metascore
+                  <span style={{ display: "inline-block", width: "75px" }}>
+                    Metascore
+                  </span>
+                  <span style={{ display: "inline-block", width: "16px" }}>
+                    {sortBy === "metascore"
+                      ? sortDir === "asc"
+                        ? "↑"
+                        : "↓"
+                      : " "}
+                  </span>
                 </th>
                 <th
+                  onClick={() => {
+                    if (sortBy === "duration_min")
+                      setSortDir(sortDir === "asc" ? "desc" : "asc");
+                    else {
+                      setSortBy("duration_min");
+                      setSortDir("asc");
+                    }
+                  }}
                   style={{
                     textAlign: "left",
                     fontSize: 12,
                     color: "#9fb0d8",
                     padding: "10px 10px",
                     borderBottom: "1px solid #1f2a44",
+                    cursor: "pointer",
                   }}
                 >
-                  Duration
+                  <span style={{ display: "inline-block", width: "65px" }}>
+                    Duration
+                  </span>
+                  <span style={{ display: "inline-block", width: "16px" }}>
+                    {sortBy === "duration_min"
+                      ? sortDir === "asc"
+                        ? "↑"
+                        : "↓"
+                      : " "}
+                  </span>
                 </th>
                 <th
                   style={{
