@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-"""Small launcher for the advanced pipeline.
 
-Usage examples:
-  python run_pipeline.py --limit 25 --fast --threads 8
-  python run_pipeline.py --limit 15         # selenium mode (fast=False)
-"""
 import argparse
 import pprint
 import json

@@ -1,22 +1,3 @@
-"""fast_imdb_top250_scraper.py
-
-Ultra-fast, low-error IMDB Top 250 scraper.
-
-Design goals
-- Use Selenium ONLY to load the Top 250 list page once (more robust against markup changes).
-- Speed up Selenium by blocking images/fonts/stylesheets.
-- Fetch per-movie details (metascore, votes, duration) via requests (fast + avoids Selenium per movie).
-- Clean messy duration strings ("2h 22m" -> minutes).
-- Impute missing metascore with median.
-- Detect IQR outliers for rating and metascore.
-- Write React-friendly JSON to:
-  - imdb-dashboard/public/movies_final.json (served by CRA)
-  - imdb-dashboard/src/movies_final.json (as required by rubric)
-
-Run:
-  venv/bin/python fast_imdb_top250_scraper.py
-"""
-
 from __future__ import annotations
 
 import json
@@ -42,11 +23,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 TOP_250_URL = "https://www.imdb.com/chart/top/"
+
 UA = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 
+HEADERS = {
+    "User-Agent": UA,
+    "Accept-Language": "en-US,en;q=0.9"
+}
 
 def parse_duration_to_minutes(s: Optional[str]) -> Optional[int]:
     if not s:

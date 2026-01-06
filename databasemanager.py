@@ -1,8 +1,4 @@
-"""
-Database Manager Module.
-Handles all interactions with the MongoDB Atlas database,
-including connection, data insertion (upsert), and retrieval.
-"""
+
 
 import datetime
 import logging
@@ -17,10 +13,8 @@ logging.basicConfig(
 
 
 class MongoDBManager:
-    """Class to manage MongoDB operations."""
 
     def __init__(self, uri, db_name, collection_name):
-        """Initializes the database manager with connection details."""
         self.uri = uri
         self.db_name = db_name
         self.collection_name = collection_name
@@ -29,7 +23,6 @@ class MongoDBManager:
         self.collection = None
 
     def connect(self):
-        """Establishes connection to MongoDB."""
         try:
             self.client = MongoClient(self.uri)
             # Test connection
@@ -41,7 +34,7 @@ class MongoDBManager:
             logging.info(message)
             return True
         except Exception as e:  # pylint: disable=broad-except
-            message = f"---> Connection Failed: {e}"
+            message = f"--> Connection Failed: {e}"
             print(message)
             logging.error(message)
             return False

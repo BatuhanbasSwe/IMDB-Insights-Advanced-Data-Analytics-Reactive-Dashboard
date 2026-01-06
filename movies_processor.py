@@ -1,32 +1,4 @@
-"""
-movies_processor.py
 
-Wrapper CLI for the advanced IMDB pipeline.
-
-This script delegates scraping/cleaning/analysis to `advanced_pipeline.run_pipeline` and
-adds clear documentation of the data-wrangling and anomaly-detection steps used.
-
-Usage:
-  python movies_processor.py --limit 100 --fast
-
-Outputs (repo root):
-  - movies_cleaned.json
-  - movies_charts.json
-  - movies_analysis.json
-  - movies_final.json
-  - boxplot_rating.png, boxplot_metascore.png
-
-Cleaning & analysis contract (what this pipeline does):
-  - Scrape: title, year, rating, metascore, duration (string), genres, votes
-  - Normalize duration to integer minutes using parse rules (2h 30m, 150 min, etc.)
-  - Coerce rating/metascore/votes/year/duration_min to numeric types (NaN when missing)
-  - Impute missing numeric values (rating, metascore, votes, duration_min, year) using column median
-  - Compute Q1, Q3, IQR and fences (lower = Q1 - 1.5*IQR, upper = Q3 + 1.5*IQR)
-  - Detect anomalies via IQR fences and regression residuals (rating vs log(votes))
-  - Produce movies_final.json containing cleaned records + boolean anomaly flags + analysis summary
-
-This file intentionally reuses the robust implementation in `advanced_pipeline.py`.
-"""
 import argparse
 import os
 import shutil

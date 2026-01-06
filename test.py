@@ -6,10 +6,7 @@ from new_scraper import IMDbScraper
 
 
 class TestIMDbProject(unittest.TestCase):
-    """
-    Robustness Tests for IMDb Project.
-    These tests ensure the core logic handles data correctly and components initialize safely.
-    """
+
 
     def test_01_data_class_integrity(self):
         """Test if Data Class correctly handles data structure."""
@@ -23,7 +20,6 @@ class TestIMDbProject(unittest.TestCase):
         print("✅ Data Class passed.")
 
     def test_02_scraper_initialization(self):
-        """Test if Scraper initializes without crashing (Headless Mode)."""
         print("\nTesting Scraper Initialization...")
         try:
             scraper = IMDbScraper(headless=True)
@@ -34,7 +30,6 @@ class TestIMDbProject(unittest.TestCase):
             self.fail(f"Scraper crashed during init: {e}")
 
     def test_03_database_connection_failure_handling(self):
-        """Test if Database Manager handles bad connection strings gracefully."""
         print("\nTesting Database Error Handling...")
         # Yanlış bir URI veriyoruz, kodun çökmemesi lazım (False dönmeli)
         fake_uri = "mongodb+srv://fake_user:wrong_pass@cluster0.fake.mongodb.net/"

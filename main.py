@@ -1,8 +1,4 @@
-"""
-IMDb Scraper Pro - Main Application Module.
-This module handles the CLI interface, user interactions,
-and coordinates the scraping and database operations.
-"""
+
 import os
 import argparse
 from dataclasses import dataclass, asdict
@@ -13,7 +9,6 @@ load_dotenv()
 
 @dataclass
 class IMDbContent:
-    """Data model representing an IMDb Movie or TV Show."""
     title: str
     rating: float
     year: int
@@ -45,7 +40,6 @@ MENU_OPTIONS = {
 
 
 def clear_terminal():
-    """Clears the terminal screen."""
     if os.name == 'nt':
         os.system('cls')
     else:
@@ -53,7 +47,6 @@ def clear_terminal():
 
 
 def print_menu():
-    """Displays the main menu options to the user."""
     clear_terminal()
     print("\n" + "=" * 40)
     print("      IMDb SCRAPER w/SELENIUM     ")
@@ -90,7 +83,6 @@ def filter_by_rating(manager: MongoDBManager):
 
 
 def select_movie_from_search(manager, action_text):
-    """Searches for a movie and asks the user to select the correct one."""
     search_name = input(f"Enter name to search ({action_text}): ").strip()
     matches = list(manager.collection.find(
         {"title": {"$regex": search_name, "$options": "i"}}
@@ -124,7 +116,6 @@ def select_movie_from_search(manager, action_text):
 
 
 def mark_as_watched(manager):
-    """Marks a selected movie as 'watched' in the database."""
     movie = select_movie_from_search(manager, "mark as watched")
     if movie:
         manager.collection.update_one(
@@ -135,7 +126,6 @@ def mark_as_watched(manager):
 
 
 def show_watched_list(manager: MongoDBManager):
-    """Displays all movies marked as watched."""
     query = {"watched": True}
     results = list(manager.collection.find(query))
     if results:
@@ -149,7 +139,6 @@ def show_watched_list(manager: MongoDBManager):
 
 
 def remove_from_watched_list(manager):
-    """Removes the 'watched' status from a selected movie."""
     movie = select_movie_from_search(manager, "remove from watched")
     if movie:
         if movie.get("watched"):
@@ -163,7 +152,6 @@ def remove_from_watched_list(manager):
 
 
 def clear_database(manager):
-    """Deletes all documents from the database."""
     confirm = input("️ ARE YOU SURE YOU WANT TO DELETE ALL DATA? (Y/N): ").strip().upper()
     if confirm == "Y":
         result = manager.collection.delete_many({})

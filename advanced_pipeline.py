@@ -1,15 +1,4 @@
-"""
-Advanced IMDB scraping + cleaning + anomaly detection pipeline.
 
-Usage:
-  - Configure CHROME_DRIVER_PATH or ensure chromedriver is in PATH.
-  - pip install -r requirements (selenium, pandas, numpy, scipy, tqdm)
-  - Run: python advanced_pipeline.py
-
-Outputs:
-  - movies_cleaned.json : cleaned record list (React-friendly)
-  - movies_analysis.json: summary + anomalies found (optional)
-"""
 
 import re
 import time
@@ -64,7 +53,6 @@ FAST_LINKS_VIA_REQUESTS = True
 
 
 def collect_top_links_via_requests(limit: int) -> List[str]:
-    """Collect up to `limit` IMDB title URLs using server-rendered search pagination."""
     search_url = "https://www.imdb.com/search/title/?groups=top_250&sort=user_rating"
     full: List[str] = []
     seen = set()
@@ -141,10 +129,9 @@ def safe_text(elem):
             return ""
 
 def parse_duration_to_minutes(duration_str: Optional[str]) -> Optional[int]:
-    """
-    Convert "2h 30m" or "150 min" to integer minutes.
-    Returns None if cannot parse.
-    """
+    
+   
+   
     if not duration_str or not isinstance(duration_str, str):
         return None
     s = duration_str.strip().lower()
@@ -565,10 +552,7 @@ class IMDbAdvancedScraper:
         return results
 
     def scrape_many_requests(self, links: List[str], max_workers: int = 8):
-        """
-        Faster scraper using requests + BeautifulSoup in parallel. This avoids starting a browser per page
-        and is suitable when IMDB pages are server-rendered sufficiently for our regex/bs4 parsing.
-        """
+      
         headers = {"User-Agent": "Mozilla/5.0"}
         results = []
 
@@ -779,14 +763,7 @@ def save_boxplot(df: pd.DataFrame, column: str, out_file: str):
 
 
 def prepare_final_json(df: pd.DataFrame, anomalies: Dict[str, pd.DataFrame], analysis_summary: Dict, out_file="movies_final.json"):
-    """Create a final JSON containing cleaned rows, anomaly flags and analysis summary.
-
-        Each record contains the cleaned fields plus boolean flags:
-            - anomaly_rating_high_meta_low
-            - anomaly_duration_outlier
-            - anomaly_rating_votes_inconsistent
-            - is_anomaly (union of the above)
-    """
+  
     df2 = df.copy()
     # build sets for quick lookup (use titles + year)
     def key(row):
@@ -834,10 +811,7 @@ def prepare_final_json(df: pd.DataFrame, anomalies: Dict[str, pd.DataFrame], ana
     logger.info("Wrote final JSON to %s (n=%d)", out_file, len(records))
 
 def run_pipeline(limit=DEFAULT_LIMIT, chart_url="https://www.imdb.com/chart/top", fast: bool = False, threads: int = 8):
-    """
-    Orchestrate scraping -> cleaning -> analysis -> export.
-    If fast=True, use the requests-based parallel scraper (faster but may miss JS-only content).
-    """
+    
     # Fast path: avoid launching Chrome entirely.
     if fast and FAST_LINKS_VIA_REQUESTS:
         links = collect_top_links_via_requests(limit=limit)

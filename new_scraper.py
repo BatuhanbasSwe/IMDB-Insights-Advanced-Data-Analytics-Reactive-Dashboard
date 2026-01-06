@@ -1,8 +1,4 @@
-"""
-IMDb Scraper Module.
-This module uses Selenium to scrape dynamic content from IMDb charts and search pages.
-It handles scrolling, button clicks, and data extraction.
-"""
+
 
 import time
 from selenium import webdriver

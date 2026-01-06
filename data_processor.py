@@ -1,18 +1,3 @@
-"""data_processor.py
-
-Scrape IMDB Top 250 Movies and Top 250 TV Shows, normalize and produce a
-single `movies_final.json` used by the React dashboard.
-
-Usage:
-  venv/bin/python data_processor.py --limit 250 --threads 16 --autosave-every 25
-
-Design notes:
-- Collect lists from the two chart pages (/chart/top/ and /chart/toptv/).
-- Label each record with `type`: 'movie' or 'tv_show'.
-- Fetch details (metascore, votes, duration, genres) via requests in parallel.
-- Clean numeric fields, impute metascore by group median, detect IQR outliers
-  separately for movies and tv_shows, and write a single JSON file.
-"""
 
 from __future__ import annotations
 
@@ -336,7 +321,6 @@ def collect_top_list_with_fallback(url: str, limit: int, kind: str = "movie") ->
 
 
 def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optional[int], Optional[int], Optional[int], Optional[str], List[str], Optional[float], Optional[int], Optional[int]]:
-    """Return metascore, votes, duration_min, duration_text, genres, rating, year, episodes"""
     try:
         resp = session.get(url, timeout=8)
         if resp.status_code != 200:
@@ -491,14 +475,7 @@ warnings.filterwarnings("ignore", message="Mean of empty slice")
 
 
 def write_react_json(payload: Dict, out_src: Optional[str] = None, out_public: Optional[str] = None):
-    """Write the given payload into the frontend `src` and `public` folders.
 
-    By default this writes to `frontend/src/movies_final.json` and
-    `frontend/public/movies_final.json`. Callers (such as autosave during
-    scraping) can pass alternative relative paths (relative to the repo root)
-    or absolute paths to avoid clobbering the primary file while the
-    pipeline is still running.
-    """
     repo_root = os.path.dirname(os.path.abspath(__file__))
     # Default paths inside the repo
     default_src = os.path.join("frontend", "src", "movies_final.json")
