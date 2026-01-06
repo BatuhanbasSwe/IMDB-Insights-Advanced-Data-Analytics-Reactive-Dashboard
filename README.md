@@ -88,7 +88,7 @@ Robust IMDb veri boru hattı: **Selenium + requests/bs4** ile Top 250 film/TV sh
 
 1. **Repoyu klonlayın:**
    ```cmd
-   git clone git@github.com:exhilarin/IMDB-Insights-Advanced-Data-Analytics-Reactive-Dashboard.git
+   git clone https://github.com/exhilarin/IMDB-Insights-Advanced-Data-Analytics-Reactive-Dashboard.git
    cd IMDB-Insights-Advanced-Data-Analytics-Reactive-Dashboard
    ```
 
@@ -131,8 +131,8 @@ Robust IMDb veri boru hattı: **Selenium + requests/bs4** ile Top 250 film/TV sh
 
 1. **Repoyu klonlayın:**
    ```bash
-   git clone <repo-url>
-   cd /path/to/project
+   git clone https://github.com/exhilarin/IMDB-Insights-Advanced-Data-Analytics-Reactive-Dashboard.git
+   cd IMDB-Insights-Advanced-Data-Analytics-Reactive-Dashboard
    ```
 
 2. **Python sanal ortamı:**
