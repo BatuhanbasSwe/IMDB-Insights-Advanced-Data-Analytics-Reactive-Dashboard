@@ -392,7 +392,7 @@ test_03_database_connection_failure_handling()  # Hatalı URI graceful fail
 
 Çalıştırma:
 ```bash
-python -m unittest test.py
+python -m unittest -v test.py
 ```
 
 ### Hata Yönetimi
