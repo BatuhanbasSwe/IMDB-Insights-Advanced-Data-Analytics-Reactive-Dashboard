@@ -188,7 +188,7 @@ def extract_top250_from_dom(driver: webdriver.Chrome) -> List[Dict]:
     return records
 
 
-def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optional[int], Optional[int], Optional[int], Optional[str], List[str], Optional[int]]:
+def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optional[int], Optional[int], Optional[int], Optional[str], List[str], Optional[int], Optional[int]]:
     try:
         resp = session.get(url, timeout=8)
         if resp.status_code != 200:
@@ -209,8 +209,9 @@ def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optiona
         if m:
             votes = parse_votes(m.group(1))
 
-        duration_text = None
-        duration_min = None
+    duration_text = None
+    duration_min = None
+    episodes = None
         m = re.search(r"(\d+\s*h(?:ours?)?(?:\s*\d+\s*m(?:in)?)?)", html, re.I)
         if m:
             duration_text = m.group(1)
@@ -257,10 +258,22 @@ def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optiona
                                         duration_min = parse_duration_to_minutes(duration_text)
                                     except Exception:
                                         pass
+                    # capture numberOfEpisodes for TVSeries objects
+                    if episodes is None and isinstance(obj, dict):
+                        for key in ('numberOfEpisodes', 'numEpisodes', 'episodeCount'):
+                            if key in obj:
+                                try:
+                                    episodes = int(obj.get(key)) if obj.get(key) is not None else None
+                                except Exception:
+                                    try:
+                                        episodes = int(str(obj.get(key)).strip())
+                                    except Exception:
+                                        episodes = None
+                                break
             except Exception:
                 continue
 
-        # de-dup
+    # de-dup
         genres = list(dict.fromkeys([g for g in genres if g]))
 
         # fallback: regex year
@@ -277,7 +290,16 @@ def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optiona
             duration_min = None
             duration_text = None
 
-        return metascore, votes, duration_min, duration_text, genres, year
+        # try regex fallback for episodes (e.g. "123 episodes") if not found in JSON-LD
+        if episodes is None:
+            m = re.search(r"(\d{1,4})\s+episodes?", html, re.I)
+            if m:
+                try:
+                    episodes = int(m.group(1))
+                except Exception:
+                    episodes = None
+
+        return metascore, votes, duration_min, duration_text, genres, year, episodes
     except Exception:
         return None, None, None, None, [], None
 
@@ -404,11 +426,11 @@ def main(argv: Optional[List[str]] = None):
     urls = list(url_to_record.keys())
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.threads) as ex:
-        futures = [ex.submit(fetch_details_with_retry, url, session) for url in urls]
+    futures = [ex.submit(fetch_details_with_retry, url, session) for url in urls]
         done = 0
         total = len(futures)
         for f in concurrent.futures.as_completed(futures):
-            url, (metascore, votes, dur_min, dur_text, genres, year) = f.result()
+            url, (metascore, votes, dur_min, dur_text, genres, year, episodes) = f.result()
             r = url_to_record.get(url)
             if not r:
                 continue
@@ -419,6 +441,9 @@ def main(argv: Optional[List[str]] = None):
             if r.get("duration_min") is None and dur_min is not None:
                 r["duration_min"] = dur_min
                 r["duration"] = dur_text
+            if episodes is not None:
+                # store episodes as an integer field; frontend will display for TV shows
+                r["episodes"] = episodes
             if genres and not r.get("genres"):
                 r["genres"] = genres
             # attach discovered year if we didn't have it from the DOM
@@ -489,6 +514,9 @@ def main(argv: Optional[List[str]] = None):
     df["votes"] = pd.to_numeric(df["votes"], errors="coerce")
     df["year"] = pd.to_numeric(df["year"], errors="coerce")
     df["duration_min"] = pd.to_numeric(df["duration_min"], errors="coerce")
+    # ensure episodes column exists and is numeric when present
+    if "episodes" in df.columns:
+        df["episodes"] = pd.to_numeric(df["episodes"], errors="coerce")
 
     median_meta = df["metascore"].median(skipna=True)
     if pd.notna(median_meta):

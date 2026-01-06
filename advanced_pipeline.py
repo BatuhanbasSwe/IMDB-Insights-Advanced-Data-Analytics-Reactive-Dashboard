@@ -428,6 +428,7 @@ class IMDbAdvancedScraper:
 
             # duration - try selectors else regex
             duration = None
+            episodes = None
             dur_selectors = [
                 "time",
                 "ul[data-testid='hero-title-block__metadata'] li",
@@ -452,6 +453,44 @@ class IMDbAdvancedScraper:
                         duration = m.group(0)
             data["duration"] = duration
             data["duration_min"] = parse_duration_to_minutes(duration)
+
+            # try to extract numberOfEpisodes from JSON-LD or page text for TV series
+            try:
+                scripts = self.driver.find_elements(By.XPATH, "//script[@type='application/ld+json']")
+                for s in scripts:
+                    try:
+                        txt = s.get_attribute('innerText') or s.get_attribute('textContent') or ""
+                        if not txt:
+                            continue
+                        import json as _json
+                        obj = _json.loads(txt)
+                        objs = obj if isinstance(obj, list) else [obj]
+                        for o in objs:
+                            if isinstance(o, dict):
+                                for key in ('numberOfEpisodes', 'numEpisodes', 'episodeCount'):
+                                    if key in o and o.get(key) is not None:
+                                        try:
+                                            episodes = int(o.get(key))
+                                        except Exception:
+                                            try:
+                                                episodes = int(str(o.get(key)).strip())
+                                            except Exception:
+                                                episodes = None
+                                        break
+                            if episodes is not None:
+                                break
+                    except Exception:
+                        continue
+                if episodes is None:
+                    m = re.search(r"(\d{1,4})\s+episodes?", page_text, re.I)
+                    if m:
+                        try:
+                            episodes = int(m.group(1))
+                        except Exception:
+                            episodes = None
+            except Exception:
+                episodes = None
+            data["episodes"] = episodes
 
             # genres - try data-testid or genre links
             genres = []

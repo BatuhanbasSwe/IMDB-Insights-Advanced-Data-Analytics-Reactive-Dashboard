@@ -335,8 +335,8 @@ def collect_top_list_with_fallback(url: str, limit: int, kind: str = "movie") ->
     return merged
 
 
-def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optional[int], Optional[int], Optional[int], Optional[str], List[str], Optional[float], Optional[int]]:
-    """Return metascore, votes, duration_min, duration_text, genres, rating, year"""
+def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optional[int], Optional[int], Optional[int], Optional[str], List[str], Optional[float], Optional[int], Optional[int]]:
+    """Return metascore, votes, duration_min, duration_text, genres, rating, year, episodes"""
     try:
         resp = session.get(url, timeout=8)
         if resp.status_code != 200:
@@ -355,9 +355,9 @@ def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optiona
             m = re.search(r"([\d,]+)\s*user", html, re.I)
         if m:
             votes = parse_votes(m.group(1))
-
         dur_text = None
         dur_min = None
+        episodes = None
         m = re.search(r"(\d+\s*h(?:ours?)?(?:\s*\d+\s*m(?:in)?)?)", html, re.I)
         if m:
             dur_text = m.group(1)
@@ -413,6 +413,18 @@ def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optiona
                                         dur_min = parse_duration_to_minutes(dur_text)
                                     except Exception:
                                         pass
+                    # capture numberOfEpisodes for TVSeries objects
+                    if episodes is None and isinstance(obj, dict):
+                        for key in ('numberOfEpisodes', 'numEpisodes', 'episodeCount'):
+                            if key in obj:
+                                try:
+                                    episodes = int(obj.get(key)) if obj.get(key) is not None else None
+                                except Exception:
+                                    try:
+                                        episodes = int(str(obj.get(key)).strip())
+                                    except Exception:
+                                        episodes = None
+                                break
             except Exception:
                 continue
         genres = list(dict.fromkeys([g for g in genres if g]))
@@ -430,13 +442,22 @@ def fetch_details_requests(url: str, session: requests.Session) -> Tuple[Optiona
             dur_min = None
             dur_text = None
 
-        return metascore, votes, dur_min, dur_text, genres, rating, year
+        # fallback regex for episodes if not found in JSON-LD
+        if episodes is None:
+            m = re.search(r"(\d{1,4})\s+episodes?", html, re.I)
+            if m:
+                try:
+                    episodes = int(m.group(1))
+                except Exception:
+                    episodes = None
+
+        return metascore, votes, dur_min, dur_text, genres, rating, year, episodes
     except Exception:
-        return None, None, None, None, [], None, None
+        return None, None, None, None, [], None, None, None
 
 
 def fetch_details_with_retry(url: str, session: requests.Session, retries: int = 2, base_backoff: float = 0.4):
-    last = (None, None, None, None, [], None, None)
+    last = (None, None, None, None, [], None, None, None)
     for attempt in range(retries + 1):
         last = fetch_details_requests(url, session)
         if any(x is not None for x in last[:4]) or (last[4] and len(last[4]) > 0) or last[5] is not None:
@@ -546,7 +567,7 @@ def main(argv: Optional[List[str]] = None):
         done = 0
         total = len(futures)
         for f in concurrent.futures.as_completed(futures):
-            url, (metascore, votes, dur_min, dur_text, genres, rating, year) = f.result()
+            url, (metascore, votes, dur_min, dur_text, genres, rating, year, episodes) = f.result()
             r = url_to_record.get(url)
             if not r:
                 continue
@@ -557,6 +578,8 @@ def main(argv: Optional[List[str]] = None):
             if r.get("duration_min") is None and dur_min is not None:
                 r["duration_min"] = dur_min
                 r["duration"] = dur_text
+            if episodes is not None:
+                r["episodes"] = episodes
             if genres and not r.get("genres"):
                 r["genres"] = genres
             if r.get("rating") is None and rating is not None:

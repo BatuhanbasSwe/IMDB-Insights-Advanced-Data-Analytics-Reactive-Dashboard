@@ -542,6 +542,60 @@ export default function App() {
     [filteredRecords]
   );
 
+  // Add a small deterministic jitter to ratings so overlapping points separate visually.
+  // We use a simple string-hash of the title to create a stable jitter per point.
+  const jitteredScatterData = useMemo(() => {
+    const hashString = (s) => {
+      let h = 2166136261 >>> 0;
+      for (let i = 0; i < (s || "").length; i++) {
+        h ^= s.charCodeAt(i);
+        h = Math.imul(h, 16777619) >>> 0;
+      }
+      return h >>> 0;
+    };
+    const maxJitter = 0.08; // max offset in rating units (+/-)
+
+    // piecewise transform for rating: compress 0..rt into 0..20, expand rt..10 into 20..100
+    const rt = 7.7; // rating threshold to start expanding
+    const transformRating = (r) => {
+      if (r <= rt) return (r / rt) * 20;
+      return 20 + ((r - rt) / (10 - rt)) * 80;
+    };
+    const inverseTransformRating = (t) => {
+      if (t <= 20) return (t / 20) * rt;
+      return rt + ((t - 20) / 80) * (10 - rt);
+    };
+
+    // piecewise transform for metascore: compress 0..50 into 0..20, expand 50..100 into 20..100
+    const transformMetascore = (m) => {
+      if (m <= 50) return (m / 50) * 20;
+      return 20 + ((m - 50) / 50) * 80;
+    };
+    const inverseTransformMetascore = (t) => {
+      if (t <= 20) return (t / 20) * 50;
+      return 50 + ((t - 20) / 80) * 50;
+    };
+
+    return (scatterData || []).map((d) => {
+      const base = d.title || `${d.rating}-${d.metascore}-${d.votes}`;
+      const h = hashString(base);
+      // map hash to [-0.5, 0.5]
+      const frac = (h % 1000) / 1000 - 0.5;
+      const jitter = frac * maxJitter * 2; // in [-maxJitter, maxJitter]
+      const jitterRating = Math.max(0, Math.min(10, d.rating + jitter));
+      const plotRating = transformRating(jitterRating);
+      const plotMetascore = transformMetascore(d.metascore);
+      return { ...d, jitterRating, plotRating, plotMetascore };
+    });
+  }, [scatterData]);
+
+  // Custom dot renderer: slightly smaller and more transparent to reduce overplotting
+  const RenderDot = (props) => {
+    const { cx, cy, fill } = props;
+    if (cx == null || cy == null) return null;
+    return <circle cx={cx} cy={cy} r={3} fill={fill} opacity={0.9} />;
+  };
+
   if (loading)
     return (
       <div style={{ padding: 24, color: "#9fb0d8" }}>Loading dashboard…</div>
@@ -565,7 +619,9 @@ export default function App() {
           <div style={styles.subtitle}>
             Loaded from <strong>/movies_final.json</strong> • Showing{" "}
             <strong>{filteredRecords.length}</strong> / {records.length} •{" "}
-            {selectedType === "all"
+            {onlyAnomalies
+              ? "Anomalies"
+              : selectedType === "all"
               ? "All"
               : selectedType === "movie"
               ? "Movies"
@@ -633,36 +689,65 @@ export default function App() {
       <section style={{ display: "flex", gap: 12, marginBottom: 18 }}>
         <div>
           <button
-            onClick={() => setSelectedType("all")}
+            onClick={() => {
+              setSelectedType("all");
+              setOnlyAnomalies(false);
+            }}
             style={{
               ...styles.button,
               background:
-                selectedType === "all" ? "#15316b" : styles.button.background,
+                selectedType === "all" && !onlyAnomalies
+                  ? "#15316b"
+                  : styles.button.background,
             }}
           >
             All
           </button>
           <button
-            onClick={() => setSelectedType("movie")}
+            onClick={() => {
+              setSelectedType("movie");
+              setOnlyAnomalies(false);
+            }}
             style={{
               ...styles.button,
               background:
-                selectedType === "movie" ? "#15316b" : styles.button.background,
+                selectedType === "movie" && !onlyAnomalies
+                  ? "#15316b"
+                  : styles.button.background,
               marginLeft: 8,
             }}
           >
             Movies
           </button>
           <button
-            onClick={() => setSelectedType("tv")}
+            onClick={() => {
+              setSelectedType("tv");
+              setOnlyAnomalies(false);
+            }}
             style={{
               ...styles.button,
               background:
-                selectedType === "tv" ? "#15316b" : styles.button.background,
+                selectedType === "tv" && !onlyAnomalies
+                  ? "#15316b"
+                  : styles.button.background,
               marginLeft: 8,
             }}
           >
             TV Shows
+          </button>
+          <button
+            onClick={() => {
+              setOnlyAnomalies((v) => !v);
+              // when toggling anomalies on, show all types but filter anomalies
+              if (!onlyAnomalies) setSelectedType("all");
+            }}
+            style={{
+              ...styles.button,
+              background: onlyAnomalies ? "#15316b" : styles.button.background,
+              marginLeft: 8,
+            }}
+          >
+            Anomalies
           </button>
         </div>
 
@@ -720,15 +805,51 @@ export default function App() {
                 <CartesianGrid stroke="#10243b" />
                 <XAxis
                   type="number"
-                  dataKey="rating"
+                  dataKey="plotRating"
                   name="Rating"
-                  domain={[0, 10]}
+                  domain={[0, 100]}
+                  // ticks: compressed 0..7 then dense ticks 7.5..10
+                  ticks={[
+                    // transformed positions for 0 and 7
+                    0,
+                    20,
+                    // transformed positions for 7.5,8,8.5,9,9.5,10
+                    ((7.5 - 7) / 3) * 80 + 20,
+                    ((8 - 7) / 3) * 80 + 20,
+                    ((8.5 - 7) / 3) * 80 + 20,
+                    ((9 - 7) / 3) * 80 + 20,
+                    ((9.5 - 7) / 3) * 80 + 20,
+                    100,
+                  ]}
+                  tickFormatter={(t) => {
+                    // inverse transform to show original rating value
+                    const inv =
+                      t <= 20 ? (t / 20) * 7 : 7 + ((t - 20) / 80) * 3;
+                    return Number.isFinite(inv)
+                      ? inv.toFixed(inv % 1 ? 1 : 0)
+                      : "";
+                  }}
                 />
                 <YAxis
                   type="number"
-                  dataKey="metascore"
+                  dataKey="plotMetascore"
                   name="Metascore"
                   domain={[0, 100]}
+                  ticks={[
+                    0,
+                    20, // transformed 50
+                    // transformed positions for 60,70,80,90
+                    20 + ((60 - 50) / 50) * 80,
+                    20 + ((70 - 50) / 50) * 80,
+                    20 + ((80 - 50) / 50) * 80,
+                    20 + ((90 - 50) / 50) * 80,
+                    100,
+                  ]}
+                  tickFormatter={(t) => {
+                    const inv =
+                      t <= 20 ? (t / 20) * 50 : 50 + ((t - 20) / 80) * 50;
+                    return Number.isFinite(inv) ? String(Math.round(inv)) : "";
+                  }}
                 />
                 <Tooltip
                   cursor={{ strokeDasharray: "3 3" }}
@@ -737,13 +858,15 @@ export default function App() {
                 <Legend />
                 <Scatter
                   name="Normal"
-                  data={scatterData.filter((d) => !d.is_anomaly)}
+                  data={jitteredScatterData.filter((d) => !d.is_anomaly)}
                   fill="#60a5fa"
+                  shape={RenderDot}
                 />
                 <Scatter
                   name="Anomaly"
-                  data={scatterData.filter((d) => d.is_anomaly)}
+                  data={jitteredScatterData.filter((d) => d.is_anomaly)}
                   fill="#ff6b6b"
+                  shape={RenderDot}
                 />
               </ScatterChart>
             </ResponsiveContainer>
@@ -939,7 +1062,9 @@ export default function App() {
                           borderBottom: "1px solid #13213a",
                         }}
                       >
-                        {typeof r.duration_min === "number"
+                        {r?.type === "tv" && typeof r.episodes === "number"
+                          ? `${r.episodes} eps`
+                          : typeof r.duration_min === "number"
                           ? `${r.duration_min} min`
                           : "-"}
                       </td>
